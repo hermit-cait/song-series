@@ -1,0 +1,605 @@
+/* DUST STYLESHEET */
+
+/* Breakpoints included in this design:
+
+1.) Mobile (small)
+2.) Mobile (medium)
+3.) Mobile (large) and tablet (portrait)
+4.) Tablet (landscape)
+5.) Laptop (small)
+6.) Desktop
+
+*/
+
+/* GLOBAL SELECTORS */
+
+body {
+  font-family: Tajawal;
+  background: #f2e4cc;
+}
+
+h1 {
+  text-align: center;
+  color: #614737;
+}
+
+p {
+  color: #471908;
+}
+
+.brightOrange {
+  color: #ff5900;
+}
+
+.terracotta {
+  color: #c34315;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  color: #4c626b;
+}
+
+/* MOBILE (SMALL) */
+
+@media only screen and (max-width: 320px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  body {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  p, a {
+    font-size: 16px;
+  }
+
+  .header-desktop {
+    display: none;
+  }
+
+  .header-mobile {
+    min-width: 10px;
+    min-height: auto;
+    max-width: 383px;
+    max-height: auto;
+    margin: 3.2vh auto;
+    padding-bottom: 1.5vh;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 90vw;
+    padding-bottom: 0vh;
+  }
+
+  section.quoteBox p {
+    font-size: 20px;
+    text-align: right;
+    color: #b58b6f;
+  }
+
+  li {
+    padding-right: 6.5vh;
+    font-size: 22px;
+  }
+
+  hr {
+    border-top: 1px solid #ff8533;
+  }
+
+  p.footer {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .smudge-cropped, .polaroid-cropped {
+    display: none;
+  }
+
+  .gap-top {
+    margin-top: 8vh;
+  }
+
+  .gap-bottom {
+    margin-bottom: 5vh;
+  }
+
+}
+
+/* MOBILE (MEDIUM) */
+
+@media only screen and (min-width: 320px) {
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .header-desktop {
+    display: none;
+  }
+
+  .header-mobile {
+    min-width: 10px;
+    min-height: auto;
+    max-width: 383px;
+    max-height: auto;
+    margin: 3.2vh auto;
+    padding-bottom: 1.5vh;
+  }
+
+  section.quoteBox p {
+    font-size: 20px;
+    text-align: right;
+    color: #b58b6f;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 90vw;
+    padding-bottom: 0vh;
+  }
+
+  li {
+    padding-right: 11vw;
+  }
+
+  p.footer {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .smudge-cropped, .polaroid-cropped {
+    display: none;
+  }
+
+  .gap-top {
+    margin-top: 45px;
+  }
+
+}
+
+/* MOBILE (LARGE) & TABLET (PORTRAIT) */
+
+@media only screen and (min-width: 425px) {
+
+  body {
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .header-mobile {
+    width: 85vw;
+    height: auto;
+  }
+
+  .smudge-large, .polaroid-large, .book {
+    width: 280px;
+    height: auto;
+  }
+
+  section.quoteBox {
+    margin: 0 auto;
+    width: 280px;
+    padding: 7px 42px 7px 35px;
+    background: #f7d8b3;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  section.quoteBox p {
+    font-size: 20px;
+    text-align: right;
+    color: #943b00;
+  }
+
+  div.mainText, section.textBox {
+    margin: 30px auto;
+  }
+
+  section.gap-top {
+    margin-top: 55px;
+  }
+
+  .gap-bottom, section.gap-bottom {
+    margin-bottom: 20px;
+  }
+
+}
+
+/* TABLET (LANDSCAPE) */
+
+@media only screen and (min-width: 768px) {
+
+  h1 {
+    font-size: 50px;
+  }
+
+  section.gap-top {
+    margin-top: 70px;
+  }
+
+}
+
+/* LAPTOP (SMALL) */
+
+@media only screen and (min-width: 950px) {
+
+  body {
+    width: 100%;
+    background: #f2e4cc;
+    margin: 0;
+  }
+
+  .header-mobile {
+    display: none;
+  }
+
+  .header-desktop {
+    width: 907px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 6px;
+    box-shadow: none;
+  }
+
+  div.mainText, section.textBox {
+    margin: 0px auto;
+  }
+
+  section.quoteBox {
+    margin: 0 auto;
+    width: 450px;
+    padding: 7px 42px 7px 35px;
+    background: #f7d8b3;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  section.quoteBox p {
+    font-size: 24px;
+    text-align: right;
+    color: #943b00;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  p, li {
+    font-size: 20px;
+  }
+
+  li {
+    padding-right: 1em;
+  }
+
+  img {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  hr {
+    display: none;
+  }
+
+  p.footer {
+    background: #fffcf9;
+    padding: 5px;
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 1.5vh;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  section.gap-top {
+    margin-top: 0px;
+  }
+
+  .gap-bottom, section.gap-bottom {
+    margin-bottom: 0px;
+  }
+
+  .spikes {
+  position: relative;
+  background: #ef9853;
+  height: 710px;
+  }
+
+.spikes::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -7%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 165px;
+  background-size: 165px 100%;
+  background-image: linear-gradient(135deg, #ef9853 25%, transparent 25%), linear-gradient(225deg, #ef9853 25%, transparent 25%);
+  background-position: 0 0;
+  }
+
+  .smudge-large {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .polaroid-large {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .book {
+    width: 480px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* .mutatedBrain {
+    position: relative;
+    top: 33px;
+    left: 30px;
+  } */
+
+  /* .skyThatWeLearned {
+    position: relative;
+    right: 15px;
+  } */
+
+  li {
+    font-size: 24px;
+  }
+
+  div.mainText p {
+    margin-top: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .space { margin-top: 130px;}
+
+  .empty { padding: 15px }
+
+  .col-s-1 {width: 12.5%;}
+  .col-s-2 {width: 25%;}
+  .col-s-3 {width: 37.5%;}
+  .col-s-4 {width: 50%;}
+  .col-s-5 {width: 62.5%;}
+  .col-s-6 {width: 75%;}
+  .col-s-7 {width: 87.5%;}
+  .col-s-8 {width: 100%;}
+
+  [class*="col-"] {
+    float: left;
+    border: 1px solid transparent;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .desktop-gap {
+    display: none;
+  }
+
+  hr {
+    display: none;
+  }
+
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 1366px) {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .header-mobile {
+    display: none;
+  }
+
+  .header-desktop {
+    width: 907px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 60px;
+    box-shadow: none;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  p, li {
+    font-size: 20px;
+  }
+
+  li {
+    font-size: 30px;
+    padding-right: 1em;
+  }
+
+  section.textBox {
+    width: 450px;
+    margin: 0 auto;
+    padding: 15px 40px 15px 40px;
+    background: #f5f0e7;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  div.mainText {
+    padding: 25px 35px 5px 35px;
+    background: #f1c6a4;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  hr {
+    display: none;
+  }
+
+  p.footer {
+    background: #fffcf9;
+    padding: 5px;
+    width: 320px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .spikes {
+  position: relative;
+  background: #ef9853;
+  height: 710px;
+  }
+
+.spikes::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -7%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 165px;
+  background-size: 165px 100%;
+  background-image: linear-gradient(135deg, #ef9853 25%, transparent 25%), linear-gradient(225deg, #ef9853 25%, transparent 25%);
+  background-position: 0 0;
+  }
+
+  img {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .smudge-large, .polaroid-large {
+    display: none;
+  }
+
+  .smudge-cropped {
+    display: block;
+    height: 352px;
+    width: auto;
+    float: right;
+  }
+
+  .polaroid-cropped {
+    display: block;
+    height: 418px;
+    width: auto;
+    float: left;
+  }
+
+  .book {
+    width: 550px;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .someOfTheChances {
+    height: 373px;
+    float: right;
+  }
+
+  .AWisAnEP {
+    float: left;
+  }
+
+  .ataxiaFirstSpent {
+    float: right;
+  }
+
+  .mutatedBrain {
+    float: left;
+  }
+
+  .skyThatWeLearned {
+    float: right;
+  }
+
+  .mutatedBrain {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+
+  .skyThatWeLearned {
+    position: relative;
+    right: 0px;
+  }
+
+  .movieWeMade {
+    float: left;
+  }
+
+  .space { margin-top: 150px;}
+
+  div.empty { padding: 15px }
+
+  .desktop-gap {
+    display: block;
+  }
+
+  .laptop-gap {
+    display: none;
+  }
+
+  .col-s-1 {width: 0%; padding: 0px; }
+  .col-s-2 {width: 0%; padding: 0px; }
+  .col-s-3 {width: 0%; padding: 0px; }
+  .col-s-4 {width: 0%; padding: 0px; }
+  .col-s-5 {width: 0%; padding: 0px; }
+  .col-s-6 {width: 0%; padding: 0px; }
+  .col-s-7 {width: 0%; padding: 0px; }
+  .col-s-8 {width: 0%; padding: 0px; }
+
+  .col-1 {width: 11.11%;}
+  .col-2 {width: 22.22%;}
+  .col-3 {width: 33.33%;}
+  .col-4 {width: 44.44%;}
+  .col-5 {width: 55.55%;}
+  .col-6 {width: 66.66%;}
+  .col-7 {width: 77.77%;}
+  .col-8 {width: 88.88%;}
+  .col-9 {width: 100%;}
+
+  [class*="col-"] {
+    float: left;
+    border: 1px solid transparent;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+}
