@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: Noto Sans;
+  --bg-colour-primary: #d3f5ec;
+  --bg-colour-secondary: #bdf1e3;
+  --bg-colour-tertiary: #99e7d3;
+  --bg-colour-accent: #44cdbd;
+  --text-mobile-colour-primary: #000;
+  --text-mobile-colour-secondary: #009d95;
+  --text-mobile-colour-tertiary: #005254;
+  --text-mobile-colour-accent-bold: #00e1b8;
+  --text-mobile-colour-accent-mid: #66d6b9;
+  --text-mobile-colour-accent-light: #fff;
+  --text-desktop-colour-primary: #2c6876;
+  --text-desktop-colour-secondary: #3e8090;
+  --text-desktop-colour-tertiary: #84cec6;
+  --text-desktop-colour-accent: #3ed4ae;
+}
+
+body {
+  background: var(--bg-colour-primary);
+}
+
+/* MOBILE TEXT STYLES */
+
+h1,
+h2,
+h3,
+p {
+  font-family: var(--ff-primary);
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--text-mobile-colour-primary);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--text-mobile-colour-tertiary);
+}
+
+h3 {
+  font-size: 4rem;
+  line-height: 0.1rem;
+  text-transform: uppercase;
+  color: var(--text-mobile-colour-accent-bold);
+}
+
+p {
+  font-size: 1.15rem;
+  color: var(--text-mobile-colour-tertiary);
+}
+
+span.seaFoam {
+  color: var(--text-mobile-colour-accent-light);
+}
+
+span.lightText {
+  color: var(--text-mobile-colour-accent-mid);
+}
+
+.quote p {
+  color: var(--text-mobile-colour-secondary);
+  text-align: right;
+}
+
+/* MOBILE IMAGE STYLES */
+
+.headerDesktop {
+  display: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 95%;
+  max-width: 23rem;
+  margin: 0 auto;
+  padding: 1rem 0 1rem 0;
+}
+
+/* MOBILE TEXT FORMATTING */
+
+.quote {
+  background: var(--bg-colour-tertiary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainText {
+  padding: 0 1rem 0 1rem;
+}
+
+footer {
+  height: 2rem;
+  width: 15rem;
+  background: var(--bg-colour-accent);
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: var(--text-mobile-colour-primary);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES FOR TABLETS */
+
+@media (min-width: 600px) {
+  
+body {
+  max-width: 50vw;
+  margin: 0 auto;
+}
+
+}
+
