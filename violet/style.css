@@ -3,7 +3,7 @@
 }
 
 :root {
-  --ff-primary: Noto Sans;
+  --ff-primary: Assistant;
   --bg-colour-primary: #d8b0e5;
   --bg-colour-secondary: #c783dd;
   --bg-colour-tertiary: #e4cdeb;
@@ -27,6 +27,7 @@ h1,
 p {
   font-family: var(--ff-primary);
   color: var(--text-mobile-colour-primary);
+  letter-spacing: 0.04rem;
 }
 
 h1 {
