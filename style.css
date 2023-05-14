@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    margin: 0;
 }
 
 
@@ -35,7 +34,6 @@ img {
 
 footer {
   text-align: center;
-  padding-top: 2rem;
 }
 
 /* MEDIA QUERIES FOR TABLETS */
@@ -54,10 +52,6 @@ footer {
 
   p {
     font-size: 1.2rem;
-  }
-
-  .mainText {
-    padding-bottom: 0;
   }
 
   footer p {
