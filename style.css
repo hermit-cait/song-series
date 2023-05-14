@@ -39,11 +39,11 @@ footer {
 
 @media (min-width: 600px) {
   
-  /* body {
-      min-width: 50vw;
-      max-width: 50vw;
-      margin: 0 auto;
-  } */
+  body {
+    min-width: 50vw;
+    max-width: 50vw;
+    margin: 0 auto;
+  }
 
   h1 {
     font-size: 3rem;
