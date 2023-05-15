@@ -8,9 +8,15 @@ body {
   background: #000;
 }
 
+h1,
+p {
+  font-family: Assistant;
+}
+
 h1 {
   font-size: 2.5rem;
   color: #bbb;
+  text-align: center;
 }
 
 p {
@@ -68,7 +74,9 @@ body {
 }
 
 h1 {
+  text-align: left;
   font-size: 3rem;
+  margin-left: 2rem;
 }
 
 p {
@@ -76,6 +84,7 @@ p {
 }
 
 .mainText {
+  margin: 2rem;
   padding-bottom: 0;
 }
 
@@ -100,8 +109,8 @@ img {
 } */
 
 .content {
-  grid-column: 2 / span 5;
-  grid-row: 2 / span 15;
+  grid-column: 1 / span 7;
+  grid-row: 1 / span 17;
 }
 
 .links {
