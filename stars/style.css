@@ -53,6 +53,7 @@ h2 {
 h3 {
   font-size: 4rem;
   line-height: 0.1rem;
+  margin-top: 5.5rem;
   text-transform: uppercase;
   color: var(--text-mobile-colour-accent-bold);
 }
@@ -84,7 +85,7 @@ span.lightText {
 img {
   display: block;
   height: auto;
-  width: 100%;
+  width: 95%;
   max-width: 30rem;
   margin: 0 auto;
   padding: 1rem 0 1rem 0;
@@ -92,18 +93,22 @@ img {
 
 /* MOBILE TEXT FORMATTING */
 
-.quote {
-  background: var(--bg-colour-tertiary);
+div.quote {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+section.quote {
+  background: var(--bg-colour-tertiary);
+  padding: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+}
+
 .mainText {
-  padding: 0 1rem 0 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem;
 }
 
 footer {
@@ -198,6 +203,10 @@ body {
 
   .mainText {
     background: var(--bg-colour-teriary);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   
