@@ -10,7 +10,6 @@
   --bg-colour-accent: #eee0f3;
   --text-mobile-colour-primary: #000;
   --text-mobile-colour-secondary: #fff;
-  --text-mobile-colour-tertiary: #ef2673;
   --text-mobile-colour-accent: #ff3b86;
   --text-desktop-colour-primary: #731d8f;
   --text-desktop-colour-secondary: #a833ce;
@@ -28,6 +27,7 @@ h1,
 p {
   font-family: var(--ff-primary);
   color: var(--text-mobile-colour-primary);
+  letter-spacing: 0.04rem;
 }
 
 h1 {
@@ -48,10 +48,6 @@ p {
   color: var(--text-mobile-colour-accent);
 }
 
-span {
-  color: var(--text-mobile-colour-tertiary);
-}
-
 a {
   color: var(--text-desktop-colour-secondary);
 }
@@ -65,8 +61,8 @@ a {
 img {
   display: block;
   height: auto;
-  width: 95%;
-  max-width: 23rem;
+  width: 100%;
+  max-width: 30rem;
   margin: 0 auto;
   padding: 1rem 0 1rem 0;
 }
@@ -167,13 +163,12 @@ body {
 
   h1 {
     color: var(--text-desktop-colour-primary);
-    font-size: 2.5rem;
-    text-align: center;
+    font-size: 3.3rem;
   }
 
   p {
-    font-size: 1rem;
-    color: var(--text-desktop-colour-primary)
+    color: var(--text-desktop-colour-primary);
+    font-size: 1.15rem;
   }
 
   span,
@@ -182,7 +177,6 @@ body {
   }
 
   .quote p {
-    text-align: right;
     color: var(--text-desktop-colour-secondary);
   }
 
@@ -238,6 +232,8 @@ body {
  footer p {
     font-size: 0.75rem;
   }
+
+
 
   /* HEADER LAYOUT */
 
