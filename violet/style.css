@@ -70,14 +70,9 @@ img {
 
 /* MOBILE TEXT FORMATTING */
 
-section.quote {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-div.quote {
+.quote {
   width: 95%;
+  margin: 0 auto;
   background: var(--bg-colour-secondary);
   display: flex;
   justify-content: center;
