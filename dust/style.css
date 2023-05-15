@@ -1,21 +1,25 @@
-/* DUST STYLESHEET */
+* {
+  box-sizing: border-box;
+}
 
-/* Breakpoints included in this design:
-
-1.) Mobile (small)
-2.) Mobile (medium)
-3.) Mobile (large) and tablet (portrait)
-4.) Tablet (landscape)
-5.) Laptop (small)
-6.) Desktop
-
-*/
-
-/* GLOBAL SELECTORS */
+:root {
+  --ff-primary: Assistant;
+  --bg-colour-primary: #f2e4cc;
+  --bg-colour-secondary: #ef9853;
+  --bg-colour-tertiary: #f7d8b3;
+  --bg-colour-accent: #fffcf9;
+  --text-mobile-colour-primary: ;
+  --text-mobile-colour-secondary: ;
+  --text-mobile-colour-accent: ;
+  --text-desktop-colour-primary: ;
+  --text-desktop-colour-secondary: ;
+  --text-desktop-colour-tertiary: ;
+  --text-desktop-colour-accent: ;
+}
 
 body {
-  font-family: Tajawal;
-  background: #f2e4cc;
+  font-family: Assistant;
+  background: var(--bg-colour-primary);
 }
 
 h1 {
@@ -192,8 +196,7 @@ li {
     margin: 0 auto;
     width: 280px;
     padding: 7px 42px 7px 35px;
-    background: #f7d8b3;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    background: var(--bg-colour-tertiary);
   }
 
   section.quoteBox p {
@@ -236,7 +239,7 @@ li {
 
   body {
     width: 100%;
-    background: #f2e4cc;
+    background: var(--bg-colour-primary);
     margin: 0;
   }
 
@@ -250,7 +253,6 @@ li {
     margin: 0 auto;
     padding-top: 60px;
     padding-bottom: 6px;
-    box-shadow: none;
   }
 
   div.mainText, section.textBox {
@@ -261,8 +263,7 @@ li {
     margin: 0 auto;
     width: 450px;
     padding: 7px 42px 7px 35px;
-    background: #f7d8b3;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    background: var(--bg-colour-tertiary);
   }
 
   section.quoteBox p {
@@ -283,16 +284,12 @@ li {
     padding-right: 1em;
   }
 
-  img {
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  }
-
   hr {
     display: none;
   }
 
   p.footer {
-    background: #fffcf9;
+    background: var(--bg-colour-accent);
     padding: 5px;
     width: 320px;
     margin: 0 auto;
@@ -311,7 +308,7 @@ li {
 
   .spikes {
   position: relative;
-  background: #ef9853;
+  background: var(--bg-colour-seccondary);
   height: 710px;
   }
 
@@ -325,7 +322,7 @@ li {
   display: block;
   height: 165px;
   background-size: 165px 100%;
-  background-image: linear-gradient(135deg, #ef9853 25%, transparent 25%), linear-gradient(225deg, #ef9853 25%, transparent 25%);
+  background-image: linear-gradient(135deg, var(--bg-colour-seccondary) 25%, transparent 25%), linear-gradient(225deg, var(--bg-colour-seccondary) 25%, transparent 25%);
   background-position: 0 0;
   }
 
@@ -429,7 +426,6 @@ li {
     display: block;
     margin: 0 auto;
     padding-top: 60px;
-    box-shadow: none;
   }
 
   h1 {
@@ -450,13 +446,11 @@ li {
     margin: 0 auto;
     padding: 15px 40px 15px 40px;
     background: #f5f0e7;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
   }
 
   div.mainText {
     padding: 25px 35px 5px 35px;
     background: #f1c6a4;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
   }
 
   hr {
@@ -464,19 +458,18 @@ li {
   }
 
   p.footer {
-    background: #fffcf9;
+    background: var(--bg-colour-accent);
     padding: 5px;
     width: 320px;
     margin: 0 auto;
     margin-bottom: 30px;
     font-size: 18px;
     text-align: center;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
   }
 
   .spikes {
   position: relative;
-  background: #ef9853;
+  background: var(--bg-colour-secondary);
   height: 710px;
   }
 
@@ -490,12 +483,8 @@ li {
   display: block;
   height: 165px;
   background-size: 165px 100%;
-  background-image: linear-gradient(135deg, #ef9853 25%, transparent 25%), linear-gradient(225deg, #ef9853 25%, transparent 25%);
+  background-image: linear-gradient(135deg, var(--bg-colour-secondary) 25%, transparent 25%), linear-gradient(225deg, var(--bg-colour-secondary) 25%, transparent 25%);
   background-position: 0 0;
-  }
-
-  img {
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
   }
 
   .smudge-large, .polaroid-large {
