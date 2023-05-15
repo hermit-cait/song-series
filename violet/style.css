@@ -61,7 +61,7 @@ a {
 img {
   display: block;
   height: auto;
-  width: 100%;
+  width: 95%;
   max-width: 30rem;
   margin: 0 auto;
   padding: 1rem 0 1rem 0;
@@ -69,7 +69,14 @@ img {
 
 /* MOBILE TEXT FORMATTING */
 
-.quote {
+section.quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.quote {
+  width: 95%;
   background: var(--bg-colour-secondary);
   display: flex;
   justify-content: center;
