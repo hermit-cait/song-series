@@ -20,6 +20,10 @@
   --text-desktop-colour-accent: #3ed4ae;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--bg-colour-primary);
   overflow-x: hidden;
