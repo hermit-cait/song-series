@@ -9,7 +9,7 @@
   --bg-colour-tertiary: #99e7d3;
   --bg-colour-accent: #44cdbd;
   --text-mobile-colour-primary: #000;
-  --text-mobile-colour-secondary: #009d95;
+  --text-mobile-colour-secondary: #00916c;
   --text-mobile-colour-tertiary: #005254;
   --text-mobile-colour-accent-bold: #00e1b8;
   --text-mobile-colour-accent-mid: #66d6b9;
@@ -53,6 +53,7 @@ h1 {
 h2 {
   font-size: 2rem;
   color: var(--text-mobile-colour-tertiary);
+  margin-top: 2.5rem;
 }
 
 h3 {
@@ -264,9 +265,9 @@ body {
     grid-template-rows: repeat(135, 2rem);
   }
 
-  section.gridContainer div {
+  /* section.gridContainer div {
     border: 1px solid grey;
-  }
+  } */
 
   .item-1 { grid-column: 1 / span 5; grid-row: 1 / span 8; }
   .item-2 { grid-column: 6 / span 5; grid-row: 2 / span 8; }
