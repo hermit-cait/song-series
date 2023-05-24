@@ -6,7 +6,9 @@
   <meta charset="utf-8">
   <title>Dust</title>
   <link href="style.css" type="text/css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700;800&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
@@ -14,226 +16,112 @@
 
     <header>
       <section class="spikes">
-        <img class="header-desktop" src="doors-desktop.png">
-        <img class="header-mobile" src="doors-mobile.jpg">
-        <h1>A song named: Dust</h1>
+        <img class="headerDesktop" src="doors-desktop.png">
+        <img class="headerMobile" src="doors-mobile.jpg">
+        <h1 class="hovertext" data-hover="Click to hear the song!">
+          <a href="https://www.youtube.com/watch?v=zg9NP49g8qk" target="_blank">A song named: Dust</a>
+        </h1>
       </section>
     </header>
 
-      <div class="row">
-        <div class="col-9 empty space"></div>
-      </div>
+    <section class="gridContainer">
 
-      <div class="row">
-        <div class="col-1 empty desktop-gap"></div>
-        <div class="col-3 col-s-8 quoteDiv">
-          <section class="quoteBox someOfTheChances gap-top">
-          <p>Some of the chances we take<br>
+      <div class="item-1 quote">
+        <p>Some of the chances we take<br>
           To make the money we make<br>
           Manufacturing <span class="brightOrange">disease</span><br>
-          The creature we can see</p>
-
-          <p>I'm pleased it's some other day<br>
+          The creature we can see<br><br>
+          I'm pleased it's some other day<br>
           And I've got something to say<br>
           You don't need love<br>
           So get under the rock</p>
-          </section>
-        </div>
-        <div class="col-1 empty desktop-gap"></div>
-        <div class="col-s-8 empty laptop-gap"></div>
-        <div class="col-s-1 empty clear laptop-gap"></div>
-        <div class="col-3 col-s-6">
-          <section class="textBox AWisAnEP">
-          <p><i>Automatic Writing</i> is an EP recorded by the short-lived musical project Ataxia in February 2004. The band consists of:</p>
-
-          <p>
-            <ul>
-              <li>JOHN FRUSCIANTE</li>
-              <li>JOSH KLINGHOFFER</li>
-              <li>JOE LALLY</li>
-            </ul>
-          </p>
-
-          <p>All three are established and successful musicians in their own right.</p>
-        </section>
-        </div>
-        <div class="col-1 col-s-1 empty"></div>
+      </div>
+  
+      <div class="item-2 mainText block">
+        <p><i>Automatic Writing</i> is an EP recorded by the short-lived musical project Ataxia in February 2004. The band consists of:</p>
+          <ul>
+            <li>John Frusciante</li>
+            <li>Josh Klinghoffer</li>
+            <li>Joe Lally</li>
+          </ul>
+        <p>All three are established and successful musicians in their own right.</p>
+      </div>
+  
+      <div class="item-3 mainText bgDark">
+        <p><b>John Frusciante</b> plays guitar for the Red Hot Chili Peppers and has a wide repertoire as a solo artist.<br><br>
+          <b>Josh Klinghoffer</b>, a talented multi-instrumentalist, has played in many bands including Dot Hacker, Bicycle Thief and the Chili Peppers. He has also performed extensively as a guest and touring musician for artists such as PJ Harvey, Butthole Surfers, Gnarls Barkley and Beck.<br><br> 
+          <b>Joe Lally</b> was a founding member of Fugazi. He played bass and sang vocals in the band from 1987 to 2003.</p>
+      </div>
+  
+      <div class="item-4">
+        <img class="smudgeLarge" src="smudge-large.jpg">
+      </div>
+  
+      <div class="item-5 quote">
+        <p>I have a <span class="brightOrange">mutated brain</span><br>
+          It is the form that's been made<br>
+          You go for broke<br>
+          With your prog rock show<br><br>
+          
+          Don't you know what I mean?<br>
+          The sick things that I've seen<br>
+          When you don't fall down<br>
+          There's a piercing sound</p>
+      </div>
+  
+      <div class="item-6 mainText bar">
+        <p>Ataxia was formed after John and Josh played two experimental shows at Knitting Factory in early 2004. They planned two more similar performances and asked Joe to join them and play bass.<br><br>
+        The original plan was to play existing songs from John's solo catalogue. <span class="terracotta">However, the trio decided to rather write new material from scratch.</span> This was partly due to a desire to do something more spontaneous, as well as due to Joe not feeling comfortable with trying to learn that many songs on such short notice.</p>
+      </div>
+  
+      <div class="item-7 quote">
+        <p>It was the sky that we learned<br>
+          That we're to spy on the birds<br>
+          The clouds all feel<br>
+          Where we don't feel real<br><br>
+          
+          It was implied to make a caption<br>
+          "It's a pain world", is her reaction<br>
+          We've answered why<br>
+          it's not been actioned<br>
+          We blow the ghosts<br>
+          Is this our faction?</p>
+      </div>
+  
+      <div class="item-8">
+        <img class="polaroidLarge" src="polaroid-large.jpg">
+      </div>
+  
+      <div class="item-9 mainText bar">
+        <p>The band then began writing, rehearsing and recording these ten new songs comprising about 80 minutes of music. <span class="terracotta">This entire process was lightning-fast (in true punk rock fashion) and only took two weeks.</span> Five of those songs were released on <em>Automatic Writing</em> on the 10th of August 2004 with "Dust" as the opener. The remainder of the tracks were released on an EP called <em>AWII</em> in 2007.<br><br>
+        These sessions were recorded in a live band setting with minimal overdubbing and added electronic treatments. The members shared vocal and lyric-writing duties. Josh sang on "Another", Joe on "Montreal" and John on the other three songs.</p>
+      </div>
+  
+      <div class="item-10">
+        <img class="book" src="book.jpg">
+      </div>
+  
+      <div class="item-11 mainText block">
+        <p>Ataxia first spent two days recording, then performed the two shows together at the Knitting Factory as originally planned, and then spent two more days in the studio completing their ten songs.</p>
+      </div>
+  
+      <div class="item-12 quote">
+        <p>This was the movie we made<br>
+          and we were shooting to fate<br>
+          We gather <span class="brightOrange">dust</span><br>
+          when you said it's a must</p>
       </div>
 
-      <div class="row">
-        <div class="col-9 empty desktop-gap"></div>
-        <div class="col-9 empty desktop-gap"></div>
+      <div class="item-13 mainText">
+        <p><span class="terracotta">After this, the project disbanded just as swiftly and suddenly as it was formed.</span> This musical project was as instinctive, enigmatic and impulsive of an endeavour as the title of the EP suggests.</p>
+      </div>
+  
+      <div class="item-14">
+        <footer>
+          <p>Website created by Cait Eybers</p>
+        </footer>
       </div>
 
-      <div class="row">
-        <div class="col-2 col-s-1 empty"></div>
-        <div class="col-5 col-s-6 mainText">
-          <p>John Frusciante plays guitar for the Red Hot Chili Peppers and has a wide repertoire as a solo artist.</p>
-
-          <p>Josh Klinghoffer, a talented multi-instrumentalist, has played in many bands including Dot Hacker, Bicycle Thief and the Chili Peppers. He has also performed extensively as a guest and touring musician for artists such as PJ Harvey, Butthole Surfers, Gnarls Barkley and Beck.</p>
-
-          <p>Joe Lally was a founding member of Fugazi. He played bass and sang vocals in the band from 1987 to 2003.</p>
-        </div>
-        <div class="col-2 col-s-1 empty"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-9 empty desktop-gap"></div>
-        <div class="col-9 col-s-8 empty"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-1 empty desktop-gap"></div>
-        <div class="col-3 col-s-8">
-          <img class="smudge-large gap-bottom" src="smudge-large.jpg">
-          <img class="smudge-cropped" src="smudge-cropped.jpg">
-        </div>
-        <div class="col-1 col-s-8 empty"></div>
-        <div class="col-3 col-s-8 quoteDiv">
-          <section class="quoteBox mutatedBrain">
-            <p>I have a <span class="brightOrange">mutated brain</span><br>
-            It is the form that's been made<br>
-            You go for broke<br>
-            With your prog rock show</p>
-
-            <p>Don't you know what I mean?<br>
-            The sick things that I've seen<br>
-            When you don't fall down<br>
-            There's a piercing sound</p>
-          </section>
-        </div>
-        <div class="col-1 empty desktop-gap"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-9 col-s-8 empty"></div>
-        <div class="col-9 empty desktop-gap"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-2 col-s-1"></div>
-        <div class="col-5 col-s-6 mainText">
-          <p>Ataxia was formed after John and Josh played two experimental shows at Knitting Factory in early 2004. They planned two more similar performances and asked Joe to join them and play bass.</p>
-          <p>The original plan was to play existing songs from John's solo catalogue. <span class="terracotta">However, the trio decided to rather write new material from scratch.</span> This was partly due to a desire to do something more spontaneous, as well as due to Joe not feeling comfortable with trying to learn that many songs on such short notice.</p>
-        </div>
-        <div class="col-2 col-s-1"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-9 empty desktop-gap"></div>
-        <div class="col-9 col-s-8 empty"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-1 empty desktop-gap"></div>
-        <div class="col-3 col-s-8 quoteDiv">
-          <section class="quoteBox skyThatWeLearned gap-bottom">
-            <p>It was the sky that we learned<br>
-            That we're to spy on the birds<br>
-            The clouds all feel<br>
-            Where we don't feel real</p>
-
-            <p>It was implied to make a caption<br>
-            "It's a pain world", is her reaction<br>
-            We've answered why<br>
-            it's not been actioned<br>
-            We blow the ghosts<br>
-            Is this our faction?</p>
-          </section>
-        </div>
-        <div class="col-1 col-s-8 empty"></div>
-        <div class="col-3 col-s-8">
-          <img class="polaroid-large" src="polaroid-large.jpg">
-          <img class="polaroid-cropped" src="polaroid-cropped.jpg">
-        </div>
-        <div class="col-1 empty desktop-gap"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-9 col-s-8 empty"></div>
-        <div class="col-9 empty desktop-gap"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-2 col-s-1"></div>
-        <div class="col-5 col-s-6 mainText">
-          <p>The band then began writing, rehearsing and recording these ten new songs comprising about 80 minutes of music. <span class="terracotta">This entire process was lightning-fast (in true punk rock fashion) and only took two weeks.</span> Five of those songs were released on <i>Automatic Writing</i> on the 10th of August 2004 with "Dust" as the opener. The remainder of the tracks were released on an EP called <i>AWII</i> in 2007.</p>
-          <p>These sessions were recorded in a live band setting with minimal overdubbing and added electronic treatments. The members shared vocal and lyric-writing duties. Josh sang on "Another", Joe on "Montreal" and John on the other three songs.</p>
-        </div>
-        <div class="col-2 col-s-1 empty"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-9 empty desktop-gap"></div>
-        <div class="col-9 col-s-8 empty"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-9 col-s-8 empty">
-          <img class="book" src="book.jpg">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-9 col-s-8 empty"></div>
-        <div class="col-9 empty desktop-gap"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-1 col-s-1 empty"></div>
-        <div class="col-3 col-s-6">
-          <section class="textBox ataxiaFirstSpent">
-          <p>Ataxia first spent two days recording, then performed the two shows together at the Knitting Factory as originally planned, and then spent two more days in the studio completing their ten songs.</p>
-        </section>
-        </div>
-        <div class="col-1 col-s-1 empty"></div>
-        <div class="col-s-8 empty laptop-gap"></div>
-        <div class="col-s-2 empty laptop-gap"></div>
-        <div class="col-3 col-s-4 quoteDiv">
-          <section class="quoteBox movieWeMade">
-            <p>This was the movie we made<br>
-            and we were shooting to fate<br>
-            We gather <span class="brightOrange">dust</span><br>
-            when you said it's a must</p>
-          </section>
-        </div>
-        <div class="col-1 col-s-2 empty"></div>
-        <div class="col-9 col-s-8 empty"></div>
-        <div class="col-s-8 empty laptop-gap"></div>
-        <div class="col-9 empty desktop-gap"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-2 col-s-1 empty"></div>
-        <div class="col-5 col-s-6 mainText">
-          <p><span class="terracotta">After this, the project disbanded just as swiftly and suddenly as it was formed.</span> This musical project was as instinctive, enigmatic and impulsive of an endeavour as the title of the EP suggests.</p>
-        </div>
-        <div class="col-2 col-s-1 empty"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-9 empty desktop-gap"></div>
-      </div>
-
-      <div class="backgroundBar bar-1"></div>
-      <div class="backgroundBar bar-2"></div>
-      <div class="backgroundBar bar-3"></div>
-      <div class="backgroundBar bar-4"></div>
-
-      <hr>
-
-      <div class="row">
-        <div class="col-3 col-s-2 empty"></div>
-        <div class="col-9 col-s-4 empty">
-          <p class="footer">Website created by Cait Eybers</p>
-        </div>
-        <div class="col-3 col-s-2 empty"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-s-8 empty laptop-gap"></div>
-      </div>
+    </section>
 
   </body>
-
-</html>
