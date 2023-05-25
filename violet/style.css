@@ -81,7 +81,7 @@ a {
 
 /* MOBILE IMAGE STYLES */
 
-.header-desktop {
+.headerDesktop {
   display: none;
 }
 
@@ -160,14 +160,15 @@ body {
 
   /* DESKTOP IMAGE STYLES */
 
-  .header-mobile {
+  .headerMobile {
     display: none;
   }
 
-  .header-desktop {
+  .headerDesktop {
     display: block;
-    height: auto;
-    max-width: 50rem;
+    width: auto;
+    max-height: 40rem;
+    max-width: none;
     margin: 0 auto;
     padding-top: 4.5rem;
   }
@@ -331,7 +332,7 @@ body {
     overflow: visible;
   }
 
-  h1, img.header-desktop {
+  h1, img.headerDesktop {
     transform: skewY(6deg);
     transform-origin: top left;
   }
