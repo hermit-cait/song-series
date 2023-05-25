@@ -24,19 +24,45 @@ body {
 /* MOBILE TEXT STYLES */
 
 h1,
-p {
+p,
+a {
   font-family: var(--ff-primary);
-  color: var(--text-mobile-colour-primary);
   letter-spacing: 0.04rem;
 }
 
-h1 {
+h1 a {
+  color: var(--text-mobile-colour-primary);
+  pointer-events: none;
   font-size: 2.7rem;
+  text-decoration: none;
+}
+
+h1 {
   text-align: center;
   padding-bottom: 1rem;
 }
 
+a.btn-mobile {
+  font-size: 1.5rem;
+  color: #000;
+  text-decoration: none;
+
+  width: max-content;
+  height: 3rem;
+  background: #fff;
+  border-radius: 3rem;
+
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 2rem;  
+}
+
 p {
+  color: var(--text-mobile-colour-primary);
   font-size: 1.15rem;
 }
 
@@ -126,7 +152,6 @@ body {
 
   body {
     max-width: 100%;
-    overflow-x: hidden;
   }
 
   html {
@@ -180,6 +205,18 @@ body {
     font-size: 3.3rem;
     padding: 0;
     margin: -1rem;
+  }
+
+  h1 a {
+    color: var(--text-desktop-colour-secondary);
+    font-size: 2.7rem;
+    pointer-events: initial;
+    text-decoration: none;
+  }
+
+
+  a.btn-mobile {
+    display: none;
   }
 
   a.heading {
@@ -246,7 +283,7 @@ body {
   }
 
   .review {
-    padding: 0 2.5rem; 
+    padding: 0 2rem 0 2rem; 
   }
 
   div.quote,

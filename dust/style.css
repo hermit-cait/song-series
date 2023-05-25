@@ -29,14 +29,20 @@ body {
 
 h1,
 p,
-li {
+li,
+a {
   font-family: var(--ff-primary);
   letter-spacing: 0.04rem;
 }
 
-h1 {
-  font-size: 2.7rem;
+h1 a {
   color: var(--text-mobile-colour-primary);
+  font-size: 2.7rem;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+h1 {
   text-align: center;
   padding-bottom: 1rem;
 }
@@ -86,6 +92,25 @@ img {
 }
 
 /* MOBILE TEXT FORMATTING */
+
+a.btn-mobile {
+  font-size: 1.5rem;
+  color: var(--bg-colour-accent-light);
+  text-decoration: none;
+
+  width: max-content;
+  height: 3rem;
+  background: var(--text-mobile-colour-accent-bold);
+  border-radius: 3rem;
+
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 2rem;  
+}
 
 .quote {
   background: var(--bg-colour-spikes);
@@ -147,7 +172,7 @@ footer p {
     max-width: 50%;
     margin: 0 auto;
   }
-  
+
 }
 
 /* MEDIA QUERIES FOR DESKTOP */
@@ -165,33 +190,22 @@ footer p {
     display: none;
   }
 
-  img {
-    height: auto;
-    width: auto;
-    min-width: 100%;
-    max-width: 200rem;
-    min-height: 100%;
-    padding: 0;
-    overflow: hidden;
-  }
-
   .headerDesktop {
     display: block;
-    max-width: 50rem;
-    min-width: 0;
-    min-height: 0;
+    height: auto;
+    max-width: 60rem;
     margin: 0 auto;
     padding-top: 2rem;
     padding-bottom: 0;
   }
 
-  /* .smudgeLarge,
+  .smudgeLarge,
   .polaroidLarge {
     padding: 0;
     width: 100%;
     height: auto;    
     margin: 0 auto;
-  } */
+  }
 
   div {
     overflow: hidden;
@@ -199,9 +213,14 @@ footer p {
 
   /* DESKTOP TEXT STYLES & FORMATTING*/
 
-  a {
+  a.btn-mobile {
+    display: none;
+  }
+
+  h1 a {
     color: var(--text-desktop-colour-secondary);
-    font-size: 3.3rem;
+    font-size: 2.7rem;
+    pointer-events: initial;
     text-decoration: none;
   }
 
@@ -274,7 +293,7 @@ footer p {
 
   .item-2 p,
   .item li {
-    padding: 0.5rem;
+    padding: 0.8rem;
   }
 
   .bar p {
@@ -322,9 +341,8 @@ footer p {
 
   /* section.gridContainer div {
   border: 1px solid grey;
-  }
- */
- 
+  } */
+
   .item-1 { grid-column: 4 / span 6; grid-row: 1 / span 12; }
   .item-2 { grid-column: 11 / span 6; grid-row: 1 / span 12; }
   .item-3 { grid-column: 5 / span 11; grid-row: 16 / span 9; }
@@ -334,24 +352,10 @@ footer p {
   .item-7 { grid-column: 4 / span 6; grid-row: 55 / span 13; }
   .item-8 { grid-column: 11 / span 6; grid-row: 55 / span 13; }
   .item-9 { grid-column: 1 / span 19; grid-row: 71 / span 9; }
-  .item-10 { grid-column: 8 / span 5; grid-row: 83 / span 11; }
-  .item-11 { grid-column: 2 / span 5; grid-row: 84 / span 9; }
-  .item-12 { grid-column: 14 / span 5; grid-row: 84 / span 9; }
+  .item-10 { grid-column: 6 / span 9; grid-row: 83 / span 11; }
+  .item-11 { grid-column: 2 / span 5; grid-row: 85 / span 7; }
+  .item-12 { grid-column: 14 / span 5; grid-row: 85 / span 9; }
   .item-13 { grid-column: 6 / span 9; grid-row: 97 / span 4; }
   .item-14 { grid-column: 8 / span 5; grid-row: 103 / span 1; }
 
-}
-
-/* MEDIA QUERIES FOR ULTRA-WIDE */
-
-@media (min-width: 2200px) {
-  
-  img {
-    transform: translateY(-30%);
-  }
-
-  .book {
-    min-height: 150%;
-  }
-  
 }
