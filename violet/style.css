@@ -156,6 +156,7 @@ body {
 
   html {
     padding: 0;
+    overflow-x: hidden;
   }
 
   /* DESKTOP IMAGE STYLES */
@@ -165,12 +166,14 @@ body {
   }
 
   .headerDesktop {
-    display: block;
-    width: auto;
-    max-height: 40rem;
-    max-width: none;
+    display: inline-block;
     margin: 0 auto;
-    padding-top: 4.5rem;
+    min-width: 0;
+    max-width: none;
+    width: clamp(50rem, 70%, 55rem);
+    min-height: 0;  
+    padding: 0;
+    padding-top: 2rem;
   }
 
   .imgHole {
@@ -200,21 +203,21 @@ body {
     padding: 0;
   }
 
-  /* DESKTOP TEXT STYLES & FORMATTING*/
-
-  h1 {
-    font-size: 3.3rem;
-    padding: 0;
-    margin: -1rem;
-  }
+  /* DESKTOP TEXT STYLES & FORMATTING*/  
 
   h1 a {
     color: var(--text-desktop-colour-secondary);
-    font-size: 2.7rem;
+    font-size: 3.3rem;
     pointer-events: initial;
     text-decoration: none;
   }
 
+  h1 {
+    margin-top: -5px;
+    margin-bottom: 0;
+    padding: 0;
+    padding-top: 1rem;
+  }
 
   a.btn-mobile {
     display: none;
@@ -223,33 +226,6 @@ body {
   a.heading {
     color: var(--text-desktop-colour-primary);
     text-decoration: none;
-  }
-
-  .hovertext {
-    position: relative;
-    z-index: 999;
-  }
-
-  .hovertext:before {
-    content: attr(data-hover);
-    visibility: hidden;
-    opacity: 0;
-    background-color: black;
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: 200;
-    border-radius: 1rem;
-    padding: 1rem;
-    position: absolute;
-    z-index: 999;
-    left: 50%;
-    top: 110%;
-  }
-  
-  .hovertext:hover:before {
-    opacity: 1;
-    visibility: visible;
-    z-index: 999;
   }
 
   p {
@@ -283,8 +259,13 @@ body {
     align-items: center;
   }
 
+  .quote {
+    width: 100%;
+  }
+
   .review {
-    padding: 0 2rem 0 2rem; 
+    width: 100%;
+    padding: 0 2rem; 
   }
 
   div.quote,
@@ -305,34 +286,40 @@ body {
   }
 
   .mainText {
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+  .mainText p {
+    width: 50rem;
+  }
+
   footer {
-    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   /* HEADER LAYOUT */
 
+  div.headerImage {
+    text-align: center;
+  }
+
   .skewed {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
-    height: 48rem;
-    background: #c783dd;
-    z-index: 0;
+    height: 50rem;
+    background: #c783dd;  
     transform: skewY(-6deg);
     transform-origin: top left;
     overflow: visible;
   }
 
-  h1, img.headerDesktop {
+  div.headerImage {
     transform: skewY(6deg);
     transform-origin: top left;
   }
@@ -349,43 +336,51 @@ body {
     border: 1px solid grey;
   } */ 
 
-  .item-1 { grid-column: 12 / span 6; grid-row: 24 / span 9; z-index: 1; }
-  .item-2 { grid-column: 5 / span 11; grid-row: 34 / span 4; z-index: 1; }
-  .item-3 { grid-column: 5 / span 11; grid-row: 39 / span 12; z-index: 1; }
-  .item-4 { grid-column: 5 / span 11; grid-row: 51 / span 7; z-index: 1; background: var(--bg-colour-secondary); }
-  .item-5 { grid-column: 4 / span 6; grid-row: 60 / span 13; z-index: 1; }
-  .item-6 { grid-column: 11 / span 6; grid-row: 60 / span 13; z-index: 1; }
-  .item-7 { grid-column: 5 / span 11; grid-row: 75 / span 4; z-index: 1; background: var(--bg-colour-secondary); }
-  .item-8 { grid-column: 4 / span 6; grid-row: 81 / span 11; }
-  .item-9 { grid-column: 11 / span 6; grid-row: 82 / span 9; }
-  .item-10 { grid-column: 1 / span 19; grid-row: 94 / span 16; }
-  .item-11 { grid-column: 7 / span 7; grid-row: 111 / span 11; z-index: 1; }
-  .item-12 { grid-column: 6 / span 9; grid-row: 123 / span 4; z-index: 1; }
-  .item-13 { grid-column: 7 / span 7; grid-row: 128 / span 8; z-index: 1; }
-  .item-14 { grid-column: 1 / span 19; grid-row: 138 / span 5; }
+  .item-1 { grid-column: 12 / span 6; grid-row: 24 / span 9; }    /* And the sky was made of... */
+  .item-2 { grid-column: 5 / span 11; grid-row: 34 / span 4; }    /* Hole recorded the... */
+  .item-3 { grid-column: 5 / span 11; grid-row: 39 / span 12; }   /* .imgHole */
+  .item-4 { grid-column: 5 / span 11; grid-row: 51 / span 7; }    /* The release of the album... */
+  .item-5 { grid-column: 4 / span 6; grid-row: 60 / span 13; }    /* .imgSparkles1 */
+  .item-6 { grid-column: 11 / span 6; grid-row: 60 / span 13; }   /* Might last a day... */
+  .item-7 { grid-column: 5 / span 11; grid-row: 75 / span 4; }    /* Live Through This spawned... */
+  .item-8 { grid-column: 4 / span 6; grid-row: 81 / span 11; }    /* Its lyrics juxtaposed... */
+  .item-9 { grid-column: 11 / span 6; grid-row: 82 / span 9; }    /* And the sky was all violet... */
+  .item-10 { grid-column: 1 / span 19; grid-row: 94 / span 16; }  /* .imgSparkles2 */
+  .item-11 { grid-column: 7 / span 7; grid-row: 111 / span 11; }  /* Go on, take everything... */
+  .item-12 { grid-column: 6 / span 9; grid-row: 123 / span 4; }   /* Recording for... */
+  .item-13 { grid-column: 7 / span 7; grid-row: 128 / span 8; }   /* Go on, take EVERYTHING... */
+  .item-14 { grid-column: 8 / span 5; grid-row: 138 / span 1; }  /* footer */
+  
+  .backgroundBar1 { grid-row: 31 / span 10; }
+  .backgroundBar2 { grid-row: 55 / span 22; }
+  .backgroundBar3 { grid-row: 120 / span 10; }
 
-  .backgroundBar1 { grid-column: 1 / span 19; grid-row: 31 / span 10; z-index: 0; background: #eee0f3; }
-  .backgroundBar2 { grid-column: 1 / span 19; grid-row: 55 / span 22; z-index: 0; background: #eee0f3;}
+  .bg {
+    grid-column: 1 / span 19;
+    background: var(--bg-colour-accent);
+  }
 
-  /* .backgroundBar2 {
-    background: linear-gradient(-45deg, #fff, #aaa, #999, #666);
-    background-size: 400% 400%;
-    animation: gradient 5s ease infinite;
-    height: 100%;
+  .item-4, .item-7 {
+    background: var(--bg-colour-secondary);
+  }
+
+  div {
+    z-index: 1;
+  }
+
+  .item-8, .item-9, .item-10, .item-14, .bg {
+    z-index: 0;
+  }
+
+}
+
+/* MEDIA QUERIES FOR ULTRA-WIDE */
+
+@media (min-width: 3200px) {
+  
+  .gridContainer {
+    width: 40%;
+    margin: 0 auto;
   }
   
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  } */
-
-  .backgroundBar3 { grid-column: 1 / span 19; grid-row: 120 / span 10; z-index: 0; background: #eee0f3; }
-
 }

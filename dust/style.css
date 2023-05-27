@@ -190,22 +190,24 @@ footer p {
     display: none;
   }
 
-  .headerDesktop {
-    display: block;
+  img {
+    height: auto;
     width: auto;
-    height: 35rem;
-    max-width: none;
-    margin: 0 auto;
-    padding-top: 2rem;
-    padding-bottom: 0;
+    min-width: 100%;
+    max-width: 200rem;
+    min-height: 100%;
+    padding: 0;
+    overflow: hidden;
   }
 
-  .smudgeLarge,
-  .polaroidLarge {
-    padding: 0;
-    width: 100%;
-    height: auto;    
+  .headerDesktop {
+    display: block;    
     margin: 0 auto;
+    min-width: 0;
+    width: clamp(50rem, 70%, 55rem);
+    min-height: 0;    
+    padding-top: 2rem;
+    padding-bottom: 0;
   }
 
   .book {
@@ -227,34 +229,15 @@ footer p {
 
   h1 a {
     color: var(--text-desktop-colour-secondary);
-    font-size: 2.7rem;
+    font-size: 3.3rem;
     pointer-events: initial;
     text-decoration: none;
   }
 
-  .hovertext {
-    position: relative;
-  }
-  
-  .hovertext:before {
-    content: attr(data-hover);
-    visibility: hidden;
-    opacity: 0;
-    background-color: black;
-    color: #fff;
-    font-size: 2.5rem;    
-    font-weight: 200;
-    border-radius: 1rem;
-    padding: 1rem;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 90%;
-  }
-  
-  .hovertext:hover:before {
-    opacity: 1;
-    visibility: visible;
+  h1 {
+    margin: 0;
+    padding: 0;
+    padding-top: 1rem;
   }
 
   p {
@@ -295,17 +278,14 @@ footer p {
     align-items: center;
   }
 
-  .item-2 {
-    display: block;
+  .mainText p,
+  li {
+    width: clamp(20%, 60rem, 90%);
   }
 
   .item-2 p,
-  .item li {
-    padding: 0.8rem;
-  }
-
-  .bar p {
-    width: 60%;
+  .item-2 li {
+    margin: 0 auto;
   }
 
   .block,
@@ -339,31 +319,52 @@ footer p {
   /* GRID LAYOUT */
 
   .gridContainer {
-    padding-top: 12rem;
     width: auto;
     margin: 0 auto;
+    margin-top: 10rem;
     display: grid;
     grid-template-columns: repeat(19, 1fr);
     grid-template-rows: repeat(105, 2rem);
   }
 
-  /* section.gridContainer div {
-  border: 1px solid grey;
+  /* div {
+    border: grey solid 1px;
   } */
 
-  .item-1 { grid-column: 4 / span 6; grid-row: 1 / span 12; }
-  .item-2 { grid-column: 11 / span 6; grid-row: 1 / span 12; }
-  .item-3 { grid-column: 5 / span 11; grid-row: 16 / span 9; }
-  .item-4 { grid-column: 4 / span 6; grid-row: 28 / span 13; }
-  .item-5 { grid-column: 11 / span 6; grid-row: 28 / span 13; }
-  .item-6 { grid-column: 1 / span 19; grid-row: 44 / span 8; }
-  .item-7 { grid-column: 4 / span 6; grid-row: 55 / span 13; }
-  .item-8 { grid-column: 11 / span 6; grid-row: 55 / span 13; }
-  .item-9 { grid-column: 1 / span 19; grid-row: 71 / span 9; }
-  .item-10 { grid-column: 8 / span 5; grid-row: 83 / span 11; }
-  .item-11 { grid-column: 2 / span 5; grid-row: 85 / span 7; }
-  .item-12 { grid-column: 14 / span 5; grid-row: 85 / span 9; }
-  .item-13 { grid-column: 6 / span 9; grid-row: 97 / span 4; }
-  .item-14 { grid-column: 8 / span 5; grid-row: 103 / span 1; }
+  .item-1 { grid-column: 4 / span 6; grid-row: 1 / span 12; }     /* Some of the... */
+  .item-2 { grid-column: 11 / span 6; grid-row: 1 / span 12; }    /* Automatic Writing is a... */
+  .item-3 { grid-column: 5 / span 11; grid-row: 16 / span 9; }    /* John Frusciante plays... */
+  .item-4 { grid-column: 4 / span 6; grid-row: 28 / span 13; }    /* .smudgeLarge */
+  .item-5 { grid-column: 11 / span 6; grid-row: 28 / span 13; }   /* I have a mutated brain... */
+  .item-6 { grid-column: 1 / span 19; grid-row: 44 / span 8; }    /* Ataxia was formed... */
+  .item-7 { grid-column: 4 / span 6; grid-row: 55 / span 13; }    /* It was the sky... */
+  .item-8 { grid-column: 11 / span 6; grid-row: 55 / span 13; }   /* .polaroidLarge */
+  .item-9 { grid-column: 1 / span 19; grid-row: 71 / span 9; }    /* The band then began... */
+  .item-10 { grid-column: 2 / span 5; grid-row: 85 / span 7; }    /* Ataxia first spent... */
+  .item-11 { grid-column: 8 / span 5; grid-row: 83 / span 11; }   /* .book */
+  .item-12 { grid-column: 14 / span 5; grid-row: 84 / span 9; }   /* This was the movie... */
+  .item-13 { grid-column: 6 / span 9; grid-row: 97 / span 4; }    /* After this the project */
+  .item-14 { grid-column: 8 / span 5; grid-row: 103 / span 1; }   /* footer */
 
+}
+
+/* MEDIA QUERIES FOR ULTRA-WIDE */
+
+@media (min-width: 2200px) {
+  
+  .smudgeLarge,
+  .polaroidLarge,
+  .book {
+    transform: translateY(-30%);
+  }
+
+  .book {
+    height: auto;
+    width: auto;
+    min-width: 100%;
+    max-width: 200rem;
+    min-height: 100%;
+    padding: 0;
+  }
+  
 }

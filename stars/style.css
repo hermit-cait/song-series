@@ -186,11 +186,11 @@ body {
   }
 
   .headerDesktop {
-    display: block;
-    width: auto;
-    height: 30rem;
-    max-width: none;
+    display: block;    
     margin: 0 auto;
+    min-width: 0;
+    width: clamp(50rem, 70%, 55rem);
+    min-height: 0;    
     padding-top: 2rem;
     padding-bottom: 0;
   }
@@ -202,22 +202,28 @@ body {
   }
 
   .starrySky {
-    height: 100%;
+    height: auto;
     width: auto;
-    min-width: auto;
-    max-width: none;
-    min-height: auto;
-    max-height: none;
+    min-width: 100%;
+    max-width: 200rem;
+    min-height: 100%;
     padding: 0;
+    transform: translateY(-30%);
   }
 
   /* DESKTOP TEXT STYLES & FORMATTING*/
 
   h1 a {
     color: var(--text-desktop-colour-secondary);
-    font-size: 2.7rem;
+    font-size: 3.3rem;
     pointer-events: initial;
-    text-decoration: none;
+    text-decoration: none;    
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    padding-top: 1rem;
   }
 
   a.btn-mobile {
@@ -230,44 +236,18 @@ body {
     text-decoration: none;
   }
 
-  .hovertext {
-    position: relative;
-  }
-
-  .hovertext:before {
-    content: attr(data-hover);
-    visibility: hidden;
-    opacity: 0;
-    background-color: black;
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: 200;
-    border-radius: 1rem;
-    padding: 1rem;
-    position: absolute;
-    z-index: 999;
-    left: 50%;
-    top: 90%;
-  }
-  
-  .hovertext:hover:before {
-    opacity: 1;
-    visibility: visible;
-    z-index: 999;
-  }
-
   h2 {
     font-size: 2.5rem;
     margin-top: 2.5rem;
   }
 
   h3 {
-    color: var(--text-mobile-colour-accent-bold);
+    color: var(--text-mobile-colour-accent-light);
     line-height: 5rem;
   }
 
   p {
-    color: var(--text-desktop-colour-primary);
+    color: var(--text-mobile-colour-tertiary);
     font-size: 1.15rem;
   }
 
@@ -298,9 +278,9 @@ body {
   }
 
   footer {
-    background: var(--bg-colour-tertiary);
-    margin-top: 0;
-    margin-bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
   
   /* HEADER LAYOUT */
@@ -353,7 +333,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(19, 1fr);
-    grid-template-rows: repeat(135, 2rem);
+    grid-template-rows: repeat(122, 2rem);
   }
 
   /* section.gridContainer div,
@@ -361,25 +341,25 @@ body {
     border: 1px solid grey;
    } */
 
-  .item-1 { grid-column: 2 / span 5; grid-row: 1 / span 8; }
-  .item-2 { grid-column: 8 / span 5; grid-row: 2 / span 8; }
-  .item-3 { grid-column: 14 / span 5; grid-row: 3 / span 8; }
-  .item-4 { grid-column: 3 / span 15; grid-row: 12 / span 8; }
-  .item-5 { grid-column: 4 / span 6; grid-row: 22 / span 12; }
-  .item-6 { grid-column: 11 / span 6; grid-row: 22 / span 12; }
-  .item-7 { grid-column: 3 / span 15; grid-row: 37 / span 3; }
-  .item-8 { grid-column: 3 / span 7; grid-row: 41 / span 13; }
-  .item-9 { grid-column: 3 / span 7; grid-row: 54 / span 19; }
-  .item-10 { grid-column: 11 / span 7; grid-row: 41 / span 13; }
-  .item-11 { grid-column: 11 / span 7; grid-row: 54 / span 19; }
-  .item-12 { grid-column: 3 / span 7; grid-row: 74 / span 13; }
-  .item-13 { grid-column: 3 / span 7; grid-row: 87 / span 16; }
-  .item-14 { grid-column: 11 / span 7; grid-row: 74 / span 13; }
-  .item-15 { grid-column: 11 / span 7; grid-row: 87 / span 16; }
-  .item-16 { grid-column: 2 / span 17; grid-row: 36 / span 70;} /* backgroundBlock */
-  .item-17 { grid-column: 5 / span 5; grid-row: 107 / span 10; overflow: hidden;}
-  .item-18 { grid-column: 11 / span 5; grid-row: 107 / span 10; }
-  .item-19 { grid-column: 1 / span 19; grid-row: 118 / span 2; }
+  .item-1 { grid-column: 2 / span 5; grid-row: 1 / span 8; }        /* Oh wonderful one... */
+  .item-2 { grid-column: 8 / span 5; grid-row: 2 / span 8; }        /* Glow in the darkness... */       
+  .item-3 { grid-column: 14 / span 5; grid-row: 3 / span 8; }       /* Just like the stars... */         
+  .item-4 { grid-column: 3 / span 15; grid-row: 12 / span 8; }      /* "Stars" is the opening... */ 
+  .item-5 { grid-column: 4 / span 6; grid-row: 22 / span 12; }      /* Cross the line... */  
+  .item-6 { grid-column: 11 / span 6; grid-row: 22 / span 12; }     /* 'Cause here we are... */
+  .item-7 { grid-column: 3 / span 15; grid-row: 37 / span 3; }      /* Meet the band */
+  .item-8 { grid-column: 3 / span 7; grid-row: 41 / span 13; }      /* .bandPics Emily */
+  .item-9 { grid-column: 3 / span 7; grid-row: 54 / span 19; }      /* EMILY */
+  .item-10 { grid-column: 11 / span 7; grid-row: 41 / span 13; }    /* .bandPics Stella */
+  .item-11 { grid-column: 11 / span 7; grid-row: 54 / span 19; }    /* STELLA  */
+  .item-12 { grid-column: 3 / span 7; grid-row: 74 / span 13; }     /* .bandPics Jenny Lee */
+  .item-13 { grid-column: 3 / span 7; grid-row: 87 / span 16; }     /* JENNY LEE */
+  .item-14 { grid-column: 11 / span 7; grid-row: 74 / span 13; }    /* .bandPics Theresa */
+  .item-15 { grid-column: 11 / span 7; grid-row: 87 / span 16; }    /* THERESA */
+  .item-16 { grid-column: 2 / span 17; grid-row: 36 / span 70;}     /* .backgroundBlock */
+  .item-17 { grid-column: 5 / span 5; grid-row: 108 / span 10; }    /* .starrySky */
+  .item-18 { grid-column: 11 / span 5; grid-row: 108 / span 10; }   /* And in the end... */
+  .item-19 { grid-column: 8 / span 5; grid-row: 120 / span 1; }    /* footer */
 
   .item-4 { 
     padding: 1.5rem 2rem 2rem 2rem; 
@@ -391,10 +371,16 @@ body {
     background: var(--bg-colour-tertiary);
   } 
 
-  .item-19 { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+  .item-17 {
+    overflow: hidden;
   }
 
+}
+
+/* MEDIA QUERIES FOR ULTRA-WIDE */
+
+@media (min-width: 3200px) {
+  
+  
+  
 }
