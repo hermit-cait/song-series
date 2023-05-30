@@ -8,8 +8,10 @@
   --bg-colour-secondary: #c783dd;
   --bg-colour-tertiary: #e4cdeb;
   --bg-colour-accent: #eee0f3;
+  --bg-colour-button: #9400c5;
   --text-mobile-colour-primary: #000;
   --text-mobile-colour-secondary: #fff;
+  --text-mobile-colour-tertiary: #ffd454;
   --text-mobile-colour-accent: #ff3b86;
   --text-desktop-colour-primary: #731d8f;
   --text-desktop-colour-secondary: #a833ce;
@@ -30,11 +32,9 @@ a {
   letter-spacing: 0.04rem;
 }
 
-h1 a {
+h1 {
   color: var(--text-mobile-colour-primary);
-  pointer-events: none;
   font-size: 2.7rem;
-  text-decoration: none;
 }
 
 h1 {
@@ -42,14 +42,14 @@ h1 {
   padding-bottom: 1rem;
 }
 
-a.btn-mobile {
+a.button {
   font-size: 1.5rem;
-  color: #000;
+  color: white;
   text-decoration: none;
 
   width: max-content;
   height: 3rem;
-  background: #fff;
+  background: var(--bg-colour-button);
   border-radius: 3rem;
 
   display: flex;  
@@ -75,6 +75,10 @@ p {
   color: var(--text-mobile-colour-accent);
 }
 
+span.accent {
+  color: var(--text-mobile-colour-tertiary);
+}
+
 a {
   color: var(--text-desktop-colour-secondary);
 }
@@ -89,9 +93,8 @@ img {
   display: block;
   height: auto;
   width: 95%;
-  max-width: 30rem;
   margin: 0 auto;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0;
 }
 
 /* MOBILE TEXT FORMATTING */
@@ -205,37 +208,23 @@ body {
 
   /* DESKTOP TEXT STYLES & FORMATTING*/  
 
-  h1 a {
+  h1 {
     color: var(--text-desktop-colour-secondary);
     font-size: 3.3rem;
-    pointer-events: initial;
-    text-decoration: none;
-  }
-
-  h1 {
     margin-top: -5px;
     margin-bottom: 0;
     padding: 0;
     padding-top: 1rem;
   }
 
-  a.btn-mobile {
-    display: none;
-  }
-
-  a.heading {
-    color: var(--text-desktop-colour-primary);
-    text-decoration: none;
+  a.button {
+    position: relative;
+    margin-top: clamp(3rem, 5.5%, calc(5rem + 10%))
   }
 
   p {
     color: var(--text-desktop-colour-primary);
     font-size: 1.15rem;
-  }
-
-  span,
-  a {
-    color: var(--text-desktop-colour-accent);
   }
 
   .quote p {
@@ -277,6 +266,10 @@ body {
     font-size: 1.75rem;
   }
 
+  span.accent {
+    color: var(--text-desktop-colour-accent);
+  }
+
   span.textLight {
     color: var(--text-desktop-colour-tertiary);
   }
@@ -293,7 +286,7 @@ body {
   }
 
   .mainText p {
-    width: 50rem;
+    width: clamp(20%, 50rem, 90%);
   }
 
   footer {
@@ -312,14 +305,15 @@ body {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 50rem;
-    background: #c783dd;  
+    height: clamp(53rem, 95%, calc(50rem + 10%));
+    background: var(--bg-colour-secondary);  
     transform: skewY(-6deg);
     transform-origin: top left;
     overflow: visible;
   }
 
-  div.headerImage {
+  div.headerImage,
+  a.button {
     transform: skewY(6deg);
     transform-origin: top left;
   }
@@ -327,33 +321,36 @@ body {
   /* GRID LAYOUT */
 
   .gridContainer {
+    width: clamp(30%, 100%, 150rem);
+    margin: 0 auto;
+    margin-top: 52rem;
     display: grid;
     grid-template-columns: repeat(19, 1fr);
-    grid-template-rows: repeat(140, 2rem);
+    grid-template-rows: repeat(117, 2rem);
   }
 
   /* div {
     border: 1px solid grey;
   } */ 
 
-  .item-1 { grid-column: 12 / span 6; grid-row: 24 / span 9; }    /* And the sky was made of... */
-  .item-2 { grid-column: 5 / span 11; grid-row: 34 / span 4; }    /* Hole recorded the... */
-  .item-3 { grid-column: 5 / span 11; grid-row: 39 / span 12; }   /* .imgHole */
-  .item-4 { grid-column: 5 / span 11; grid-row: 51 / span 7; }    /* The release of the album... */
-  .item-5 { grid-column: 4 / span 6; grid-row: 60 / span 13; }    /* .imgSparkles1 */
-  .item-6 { grid-column: 11 / span 6; grid-row: 60 / span 13; }   /* Might last a day... */
-  .item-7 { grid-column: 5 / span 11; grid-row: 75 / span 4; }    /* Live Through This spawned... */
-  .item-8 { grid-column: 4 / span 6; grid-row: 81 / span 11; }    /* Its lyrics juxtaposed... */
-  .item-9 { grid-column: 11 / span 6; grid-row: 82 / span 9; }    /* And the sky was all violet... */
-  .item-10 { grid-column: 1 / span 19; grid-row: 94 / span 16; }  /* .imgSparkles2 */
-  .item-11 { grid-column: 7 / span 7; grid-row: 111 / span 11; }  /* Go on, take everything... */
-  .item-12 { grid-column: 6 / span 9; grid-row: 123 / span 4; }   /* Recording for... */
-  .item-13 { grid-column: 7 / span 7; grid-row: 128 / span 8; }   /* Go on, take EVERYTHING... */
-  .item-14 { grid-column: 8 / span 5; grid-row: 138 / span 1; }  /* footer */
+  .item-1 { grid-column: 12 / span 6; grid-row: 1 / span 9; }    /* And the sky was made of... */
+  .item-2 { grid-column: 5 / span 11; grid-row: 11 / span 4; }    /* Hole recorded the... */
+  .item-3 { grid-column: 5 / span 11; grid-row: 16 / span 12; }   /* .imgHole */
+  .item-4 { grid-column: 5 / span 11; grid-row: 28 / span 7; }    /* The release of the album... */
+  .item-5 { grid-column: 4 / span 6; grid-row: 37 / span 13; }    /* .imgSparkles1 */
+  .item-6 { grid-column: 11 / span 6; grid-row: 37 / span 13; }   /* Might last a day... */
+  .item-7 { grid-column: 5 / span 11; grid-row: 52 / span 4; }    /* Live Through This spawned... */
+  .item-8 { grid-column: 4 / span 6; grid-row: 58 / span 11; }    /* Its lyrics juxtaposed... */
+  .item-9 { grid-column: 11 / span 6; grid-row: 59 / span 9; }    /* And the sky was all violet... */
+  .item-10 { grid-column: 1 / span 19; grid-row: 71 / span 16; }  /* .imgSparkles2 */
+  .item-11 { grid-column: 7 / span 7; grid-row: 88 / span 11; }  /* Go on, take everything... */
+  .item-12 { grid-column: 6 / span 9; grid-row: 100 / span 4; }   /* Recording for... */
+  .item-13 { grid-column: 7 / span 7; grid-row: 105 / span 8; }   /* Go on, take EVERYTHING... */
+  .item-14 { grid-column: 8 / span 5; grid-row: 115 / span 1; }  /* footer */
   
-  .backgroundBar1 { grid-row: 31 / span 10; }
-  .backgroundBar2 { grid-row: 55 / span 22; }
-  .backgroundBar3 { grid-row: 120 / span 10; }
+  .backgroundBar1 { grid-row: 8 / span 10; }
+  .backgroundBar2 { grid-row: 32 / span 22; }
+  .backgroundBar3 { grid-row: 97 / span 10; }
 
   .bg {
     grid-column: 1 / span 19;
@@ -372,15 +369,4 @@ body {
     z-index: 0;
   }
 
-}
-
-/* MEDIA QUERIES FOR ULTRA-WIDE */
-
-@media (min-width: 3200px) {
-  
-  .gridContainer {
-    width: 40%;
-    margin: 0 auto;
-  }
-  
 }

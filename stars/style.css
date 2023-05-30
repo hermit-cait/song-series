@@ -10,7 +10,7 @@
   --bg-colour-accent: #44cdbd;
   --bg-color-wave: #7ad9ce;
   --text-mobile-colour-primary: #000;
-  --text-mobile-colour-secondary: #009d95;
+  --text-mobile-colour-secondary: #008780;
   --text-mobile-colour-tertiary: #005254;
   --text-mobile-colour-accent-bold: #00e1b8;
   --text-mobile-colour-accent-mid: #66d6b9;
@@ -46,14 +46,9 @@ h3 {
   text-align: center;
 }
 
-h1 a {
-  color: var(--text-mobile-colour-primary);
-  pointer-events: none;
-  font-size: 2.7rem;
-  text-decoration: none;
-}
-
 h1 {
+  color: var(--text-mobile-colour-primary);  
+  font-size: 2.7rem;
   padding-bottom: 1rem;
 }
 
@@ -72,7 +67,7 @@ h3 {
 
 p {
   font-size: 1.15rem;
-  color: var(--text-mobile-colour-tertiary);
+  color: var(--text-mobile-colour-primary);
 }
 
 span.seaFoam {
@@ -99,19 +94,19 @@ img {
   height: auto;
   width: 95%;
   margin: 0 auto;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0;
 }
 
 /* MOBILE TEXT FORMATTING */
 
-a.btn-mobile {
+a.button {
   font-size: 1.5rem;
-  color: #000;
+  color: black;
   text-decoration: none;
 
   width: max-content;
   height: 3rem;
-  background: #fff;
+  background: var(--text-desktop-colour-accent);
   border-radius: 3rem;
 
   display: flex;  
@@ -213,21 +208,18 @@ body {
 
   /* DESKTOP TEXT STYLES & FORMATTING*/
 
-  h1 a {
-    color: var(--text-desktop-colour-secondary);
-    font-size: 3.3rem;
-    pointer-events: initial;
-    text-decoration: none;    
-  }
-
   h1 {
+    color: var(--text-desktop-colour-secondary);
+    font-size: 3.3rem; 
     margin: 0;
     padding: 0;
     padding-top: 1rem;
   }
 
-  a.btn-mobile {
-    display: none;
+  a.button {
+    margin-top: 1rem;
+    background: black;
+    color: var(--text-desktop-colour-accent);
   }
 
   a {
@@ -289,7 +281,7 @@ body {
     position: relative;
     width: 100%;
     background: var(--bg-color-wave);
-    height: 45rem;
+    height: 49rem;
     z-index: 1;
     margin-bottom: 2.5rem;
   }
@@ -297,7 +289,7 @@ body {
   .wave {
     position: absolute;
     height: 250px;
-    width: 100vw;
+    width: 100%;
     background: var(--bg-color-wave);
     bottom: 0;
     z-index: -1;
@@ -329,40 +321,39 @@ body {
   /* GRID LAYOUT */
 
   .gridContainer {
-    width: 100%;
+    width: clamp(30%, 100rem, 100%);
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(19, 1fr);
-    grid-template-rows: repeat(122, 2rem);
+    grid-template-rows: repeat(124, 2rem);
   }
 
-  /* section.gridContainer div,
-  footer {
+  /* div {
     border: 1px solid grey;
    } */
 
   .item-1 { grid-column: 2 / span 5; grid-row: 1 / span 8; }        /* Oh wonderful one... */
   .item-2 { grid-column: 8 / span 5; grid-row: 2 / span 8; }        /* Glow in the darkness... */       
   .item-3 { grid-column: 14 / span 5; grid-row: 3 / span 8; }       /* Just like the stars... */         
-  .item-4 { grid-column: 3 / span 15; grid-row: 12 / span 8; }      /* "Stars" is the opening... */ 
-  .item-5 { grid-column: 4 / span 6; grid-row: 22 / span 12; }      /* Cross the line... */  
-  .item-6 { grid-column: 11 / span 6; grid-row: 22 / span 12; }     /* 'Cause here we are... */
-  .item-7 { grid-column: 3 / span 15; grid-row: 37 / span 3; }      /* Meet the band */
-  .item-8 { grid-column: 3 / span 7; grid-row: 41 / span 13; }      /* .bandPics Emily */
-  .item-9 { grid-column: 3 / span 7; grid-row: 54 / span 19; }      /* EMILY */
-  .item-10 { grid-column: 11 / span 7; grid-row: 41 / span 13; }    /* .bandPics Stella */
-  .item-11 { grid-column: 11 / span 7; grid-row: 54 / span 19; }    /* STELLA  */
-  .item-12 { grid-column: 3 / span 7; grid-row: 74 / span 13; }     /* .bandPics Jenny Lee */
-  .item-13 { grid-column: 3 / span 7; grid-row: 87 / span 16; }     /* JENNY LEE */
-  .item-14 { grid-column: 11 / span 7; grid-row: 74 / span 13; }    /* .bandPics Theresa */
-  .item-15 { grid-column: 11 / span 7; grid-row: 87 / span 16; }    /* THERESA */
-  .item-16 { grid-column: 2 / span 17; grid-row: 36 / span 70;}     /* .backgroundBlock */
-  .item-17 { grid-column: 5 / span 5; grid-row: 108 / span 10; }    /* .starrySky */
-  .item-18 { grid-column: 11 / span 5; grid-row: 108 / span 10; }   /* And in the end... */
-  .item-19 { grid-column: 8 / span 5; grid-row: 120 / span 1; }    /* footer */
+  .item-4 { grid-column: 5 / span 11; grid-row: 12 / span 10; }      /* "Stars" is the opening... */ 
+  .item-5 { grid-column: 4 / span 6; grid-row: 24 / span 12; }      /* Cross the line... */  
+  .item-6 { grid-column: 11 / span 6; grid-row: 24 / span 12; }     /* 'Cause here we are... */
+  .item-7 { grid-column: 3 / span 15; grid-row: 39 / span 3; }      /* Meet the band */
+  .item-8 { grid-column: 3 / span 7; grid-row: 43 / span 13; }      /* .bandPics Emily */
+  .item-9 { grid-column: 3 / span 7; grid-row: 56 / span 19; }      /* EMILY */
+  .item-10 { grid-column: 11 / span 7; grid-row: 43 / span 13; }    /* .bandPics Stella */
+  .item-11 { grid-column: 11 / span 7; grid-row: 56 / span 19; }    /* STELLA  */
+  .item-12 { grid-column: 3 / span 7; grid-row: 76 / span 13; }     /* .bandPics Jenny Lee */
+  .item-13 { grid-column: 3 / span 7; grid-row: 89 / span 16; }     /* JENNY LEE */
+  .item-14 { grid-column: 11 / span 7; grid-row: 76 / span 13; }    /* .bandPics Theresa */
+  .item-15 { grid-column: 11 / span 7; grid-row: 89 / span 16; }    /* THERESA */
+  .item-16 { grid-column: 2 / span 17; grid-row: 38 / span 70;}     /* .backgroundBlock */
+  .item-17 { grid-column: 5 / span 5; grid-row: 110 / span 10; }    /* .starrySky */
+  .item-18 { grid-column: 11 / span 5; grid-row: 110 / span 10; }   /* And in the end... */
+  .item-19 { grid-column: 8 / span 5; grid-row: 122 / span 1; }    /* footer */
 
-  .item-4 { 
-    padding: 1.5rem 2rem 2rem 2rem; 
+  .item-4 /* "Stars" is the opening... */  { 
+    padding: 2.5rem; 
     background: var(--bg-colour-tertiary);
    }
 
@@ -371,16 +362,8 @@ body {
     background: var(--bg-colour-tertiary);
   } 
 
-  .item-17 {
+  .item-17 /* .starrySky */ { 
     overflow: hidden;
   }
 
-}
-
-/* MEDIA QUERIES FOR ULTRA-WIDE */
-
-@media (min-width: 3200px) {
-  
-  
-  
 }

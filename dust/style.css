@@ -15,7 +15,7 @@
   --text-mobile-colour-accent-bold: #FF3C00;
   --text-mobile-colour-accent-blue: #0A6B96;
   --text-mobile-colour-accent-light: #fff;
-  --text-desktop-colour-primary: ;
+  --text-desktop-colour-primary: #000;
   --text-desktop-colour-secondary: #614737;
   --text-desktop-colour-tertiary: #a5340b;
   --text-desktop-colour-accent: #FF3C00;
@@ -35,14 +35,9 @@ a {
   letter-spacing: 0.04rem;
 }
 
-h1 a {
+h1 {
   color: var(--text-mobile-colour-primary);
   font-size: 2.7rem;
-  pointer-events: none;
-  text-decoration: none;
-}
-
-h1 {
   text-align: center;
   padding-bottom: 1rem;
 }
@@ -86,16 +81,15 @@ img {
   display: block;
   height: auto;
   width: 95%;
-  max-width: 30rem;
   margin: 0 auto;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0;
 }
 
 /* MOBILE TEXT FORMATTING */
 
-a.btn-mobile {
+a.button {
   font-size: 1.5rem;
-  color: var(--bg-colour-accent-light);
+  color: white;
   text-decoration: none;
 
   width: max-content;
@@ -223,21 +217,16 @@ footer p {
 
   /* DESKTOP TEXT STYLES & FORMATTING*/
 
-  a.btn-mobile {
-    display: none;
-  }
-
-  h1 a {
+  h1 {
     color: var(--text-desktop-colour-secondary);
     font-size: 3.3rem;
-    pointer-events: initial;
-    text-decoration: none;
-  }
-
-  h1 {
     margin: 0;
     padding: 0;
     padding-top: 1rem;
+  }
+
+  a.button {
+    margin-top: 1rem;
   }
 
   p {
@@ -271,8 +260,7 @@ footer p {
   }
 
   .mainText {
-    background: var(--bg-colour-secondary);
-    padding: 1rem 3rem;
+    background: var(--bg-colour-secondary);    
     display: flex; 
     justify-content: center; 
     align-items: center;
@@ -280,7 +268,7 @@ footer p {
 
   .mainText p,
   li {
-    width: clamp(20%, 60rem, 90%);
+    width: clamp(20%, 50rem, 90%);
   }
 
   .item-2 p,
@@ -298,7 +286,7 @@ footer p {
   .spikes {
     position: relative;
     background: var(--bg-colour-spikes);
-    height: 42rem;
+    height: 47rem;
     }
   
   .spikes::after {
@@ -319,7 +307,7 @@ footer p {
   /* GRID LAYOUT */
 
   .gridContainer {
-    width: auto;
+    width: clamp(30%, 100rem, 100%);
     margin: 0 auto;
     margin-top: 10rem;
     display: grid;
@@ -328,7 +316,7 @@ footer p {
   }
 
   /* div {
-    border: grey solid 1px;
+    border: 1px solid grey;
   } */
 
   .item-1 { grid-column: 4 / span 6; grid-row: 1 / span 12; }     /* Some of the... */
