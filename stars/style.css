@@ -27,6 +27,7 @@ html {
 
 body {
   background: var(--bg-colour-primary);
+  overflow-x: hidden;
 }
 
 /* MOBILE TEXT STYLES */
@@ -53,21 +54,21 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
   color: var(--text-mobile-colour-tertiary);
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 4rem;
-  margin: 1.5rem 0 0 0;
-  line-height: 3rem;
-  text-transform: uppercase;
   color: var(--text-mobile-colour-accent-bold);
+  font-size: 4rem;
+  line-height: 3rem;
+  margin: 1.5rem 0 0 0;
+  text-transform: uppercase;
 }
 
 p {
-  font-size: 1.15rem;
   color: var(--text-mobile-colour-primary);
+  font-size: 1.15rem;
 }
 
 span.seaFoam {
@@ -91,8 +92,8 @@ span.lightText {
 
 img {
   display: block;
-  height: auto;
   width: 95%;
+  height: auto;
   margin: 0 auto;
   padding: 1rem 0;
 }
@@ -100,13 +101,13 @@ img {
 /* MOBILE TEXT FORMATTING */
 
 a.button {
-  font-size: 1.5rem;
+  background: var(--text-desktop-colour-accent);
   color: black;
+  font-size: 1.5rem;
   text-decoration: none;
 
   width: max-content;
   height: 3rem;
-  background: var(--text-desktop-colour-accent);
   border-radius: 3rem;
 
   display: flex;  
@@ -120,8 +121,8 @@ a.button {
 
 .quote {
   background: var(--bg-colour-tertiary);
-  margin: 0 auto;
   width: 95%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,12 +133,10 @@ a.button {
 }
 
 footer {
-  height: 2rem;
-  width: 15rem;
   background: var(--bg-colour-accent);
-  margin: 0 auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  width: 15rem;
+  height: 2rem;
+  margin: 3rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,10 +152,10 @@ footer p {
 
 @media (min-width: 600px) {
   
-body {
-  max-width: 50%;
-  margin: 0 auto;
-}
+  body {
+    max-width: 50%;
+    margin: 0 auto;
+  }
 
 }
 
@@ -167,7 +166,6 @@ body {
   body {
     max-width: 100%;
     margin: 0;
-    overflow-x: hidden;
   }
 
   /* DESKTOP IMAGE STYLES */
@@ -183,8 +181,8 @@ body {
   .headerDesktop {
     display: block;    
     margin: 0 auto;
-    min-width: 0;
     width: clamp(50rem, 70%, 55rem);
+    min-width: 0;
     min-height: 0;    
     padding-top: 2rem;
     padding-bottom: 0;
@@ -197,8 +195,8 @@ body {
   }
 
   .starrySky {
-    height: auto;
     width: auto;
+    height: auto;
     min-width: 100%;
     max-width: 200rem;
     min-height: 100%;
@@ -217,9 +215,9 @@ body {
   }
 
   a.button {
-    margin-top: 1rem;
+    color: var(--text-desktop-colour-accent);    
     background: black;
-    color: var(--text-desktop-colour-accent);
+    margin-top: 1rem;
   }
 
   a {
@@ -277,20 +275,20 @@ body {
   
   /* HEADER LAYOUT */
 
-  .waveContainer {
+  .waveContainer {    
+    background: var(--bg-color-wave);
     position: relative;
     width: 100%;
-    background: var(--bg-color-wave);
     height: 49rem;
     z-index: 1;
     margin-bottom: 2.5rem;
   }
   
   .wave {
-    position: absolute;
-    height: 250px;
-    width: 100%;
     background: var(--bg-color-wave);
+    position: absolute;
+    width: 100%;
+    height: 250px;
     bottom: 0;
     z-index: -1;
   }
@@ -303,19 +301,19 @@ body {
   }
   
   .wave::before {
+    background: var(--bg-color-wave);
     width: 78.4%;
     height: 100%;
-    background: var(--bg-color-wave);
-    right: -20%;
     top: 20%;
+    right: -20%;
   }
   
   .wave::after {
+    background: var(--bg-colour-primary);
     width: 78.4%;
     height: 109%;
-    background: var(--bg-colour-primary);
-    left: -20%;
     top: 80%;
+    left: -20%;
   }
 
   /* GRID LAYOUT */
@@ -353,13 +351,13 @@ body {
   .item-19 { grid-column: 8 / span 5; grid-row: 122 / span 1; }    /* footer */
 
   .item-4 /* "Stars" is the opening... */  { 
-    padding: 2.5rem; 
     background: var(--bg-colour-tertiary);
+    padding: 2.5rem; 
    }
 
   .item-16 /* backgroundBlock */ { 
-    z-index: -1; 
     background: var(--bg-colour-tertiary);
+    z-index: -1; 
   } 
 
   .item-17 /* .starrySky */ { 

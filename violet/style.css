@@ -42,14 +42,14 @@ h1 {
   padding-bottom: 1rem;
 }
 
-a.button {
-  font-size: 1.5rem;
+a.button {  
+  background: var(--bg-colour-button);
   color: white;
+  font-size: 1.5rem;
   text-decoration: none;
 
   width: max-content;
   height: 3rem;
-  background: var(--bg-colour-button);
   border-radius: 3rem;
 
   display: flex;  
@@ -91,8 +91,8 @@ a {
 
 img {
   display: block;
-  height: auto;
   width: 95%;
+  height: auto;
   margin: 0 auto;
   padding: 1rem 0;
 }
@@ -100,9 +100,9 @@ img {
 /* MOBILE TEXT FORMATTING */
 
 .quote {
+  background: var(--bg-colour-secondary);
   width: 95%;
   margin: 0 auto;
-  background: var(--bg-colour-secondary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,10 +110,10 @@ img {
 
 .review {
   background: var(--bg-colour-accent);
-  padding: 1rem;
+  width: 95%;
   display: block;
   margin: 0 auto;
-  width: 95%;
+  padding: 1rem;
 }
 
 .mainText {
@@ -121,9 +121,9 @@ img {
 }
 
 footer {
-  height: 2rem;
-  width: 15rem;
   background: var(--bg-colour-accent);
+  width: 15rem;
+  height: 2rem;
   margin: 0 auto;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -134,18 +134,18 @@ footer {
 
 footer p {
   color: var(--text-mobile-colour-accent);
-  text-align: center;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 /* MEDIA QUERIES FOR TABLETS */
 
 @media (min-width: 600px) {
   
-body {
-  max-width: 50%;
-  margin: 0 auto;
-}
+  body {
+    max-width: 50%;
+    margin: 0 auto;
+  }
 
 }
 
@@ -171,9 +171,9 @@ body {
   .headerDesktop {
     display: inline-block;
     margin: 0 auto;
+    width: clamp(50rem, 70%, 55rem);
     min-width: 0;
     max-width: none;
-    width: clamp(50rem, 70%, 55rem);
     min-height: 0;  
     padding: 0;
     padding-top: 2rem;
@@ -187,8 +187,8 @@ body {
   }
 
   .imgSparkles1 {
-    height: auto;
     width: auto;
+    height: auto;
     min-width: 100%;
     max-width: 200rem;
     min-height: 100%;
@@ -289,6 +289,10 @@ body {
     width: clamp(20%, 50rem, 90%);
   }
 
+  .bgDark {
+    background: var(--bg-colour-secondary);
+  }
+
   footer {
     width: 100%;
     padding: 0;
@@ -302,11 +306,11 @@ body {
   }
 
   .skewed {
+    background: var(--bg-colour-secondary);
     position: absolute;
     inset: 0;
     width: 100%;
     height: clamp(53rem, 95%, calc(50rem + 10%));
-    background: var(--bg-colour-secondary);  
     transform: skewY(-6deg);
     transform-origin: top left;
     overflow: visible;
@@ -344,7 +348,7 @@ body {
   .item-9 { grid-column: 11 / span 6; grid-row: 59 / span 9; }    /* And the sky was all violet... */
   .item-10 { grid-column: 1 / span 19; grid-row: 71 / span 16; }  /* .imgSparkles2 */
   .item-11 { grid-column: 7 / span 7; grid-row: 88 / span 11; }  /* Go on, take everything... */
-  .item-12 { grid-column: 6 / span 9; grid-row: 100 / span 4; }   /* Recording for... */
+  .item-12 { grid-column: 5 / span 11; grid-row: 100 / span 4; }   /* Recording for... */
   .item-13 { grid-column: 7 / span 7; grid-row: 105 / span 8; }   /* Go on, take EVERYTHING... */
   .item-14 { grid-column: 8 / span 5; grid-row: 115 / span 1; }  /* footer */
   
@@ -353,19 +357,15 @@ body {
   .backgroundBar3 { grid-row: 97 / span 10; }
 
   .bg {
-    grid-column: 1 / span 19;
     background: var(--bg-colour-accent);
-  }
-
-  .item-4, .item-7 {
-    background: var(--bg-colour-secondary);
+    grid-column: 1 / span 19;
   }
 
   div {
     z-index: 1;
   }
 
-  .item-8, .item-9, .item-10, .item-14, .bg {
+  .indexZero, .bg {
     z-index: 0;
   }
 
