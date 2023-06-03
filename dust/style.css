@@ -281,8 +281,7 @@ footer p {
     margin: 0 auto;
   }
 
-  .block,
-  footer {
+  .bgLight {
     background: var(--bg-colour-accent-light);
   }
 
