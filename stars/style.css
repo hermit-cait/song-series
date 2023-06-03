@@ -84,6 +84,11 @@ span.lightText {
   text-align: right;
 }
 
+::selection {
+  color: white;
+  background: black;
+}
+
 /* MOBILE IMAGE STYLES */
 
 .headerDesktop {
