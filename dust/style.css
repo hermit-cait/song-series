@@ -9,16 +9,16 @@
   --bg-colour-tertiary: #f7d8b3;
   --bg-colour-spikes: #ef9853;
   --bg-colour-accent-light: #f5f0e7;
-  --bg-colour-accent-dark: #D1A887;
+  --bg-colour-accent-dark: #d1a887;
   --text-mobile-colour-primary: #000;
-  --text-mobile-colour-secondary: #3D170C;
-  --text-mobile-colour-accent-bold: #FF3C00;
-  --text-mobile-colour-accent-blue: #0A6B96;
+  --text-mobile-colour-secondary: #3d170c;
+  --text-mobile-colour-accent-bold: #ff3c00;
+  --text-mobile-colour-accent-blue: #0a6b96;
   --text-mobile-colour-accent-light: #fff;
   --text-desktop-colour-primary: #000;
   --text-desktop-colour-secondary: #614737;
   --text-desktop-colour-tertiary: #a5340b;
-  --text-desktop-colour-accent: #FF3C00;
+  --text-desktop-colour-accent: #ff3c00;
 }
 
 body {
@@ -43,8 +43,8 @@ h1 {
 }
 
 p {
-  font-size: 1.15rem;
   color: var(--text-mobile-colour-secondary);
+  font-size: 1.15rem;
 }
 
 .quote p {
@@ -56,11 +56,11 @@ ul {
 }
 
 li {
+  color: var(--text-mobile-colour-accent-blue);
   font-size: 1.5rem;
   text-align: center;
   list-style: none;
   text-transform: uppercase;
-  color: var(--text-mobile-colour-accent-blue);
 }
 
 .brightOrange {
@@ -84,22 +84,26 @@ li {
 
 img {
   display: block;
-  height: auto;
   width: 95%;
+  height: auto;
   margin: 0 auto;
   padding: 1rem 0;
+}
+
+.polaroid {
+  padding-bottom: 0;
 }
 
 /* MOBILE TEXT FORMATTING */
 
 a.button {
-  font-size: 1.5rem;
   color: white;
+  background: var(--text-mobile-colour-accent-bold);
+  font-size: 1.5rem;
   text-decoration: none;
 
   width: max-content;
   height: 3rem;
-  background: var(--text-mobile-colour-accent-bold);
   border-radius: 3rem;
 
   display: flex;  
@@ -125,7 +129,7 @@ a.button {
 }
 
 .mainText {
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem;
 }
 
 .mainText p {
@@ -146,12 +150,10 @@ a.button {
 }
 
 footer {
-  height: 2rem;
-  width: 15rem;
   background: var(--bg-colour-accent-light);
-  margin: 0 auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  width: 15rem;
+  height: 2rem;
+  margin: 3rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,8 +204,8 @@ footer p {
   .headerDesktop {
     display: block;    
     margin: 0 auto;
-    min-width: 0;
     width: clamp(50rem, 70%, 55rem);
+    min-width: 0;
     min-height: 0;    
     padding-top: 2rem;
     padding-bottom: 0;
@@ -288,8 +290,8 @@ footer p {
   /* HEADER LAYOUT */
 
   .spikes {
-    position: relative;
     background: var(--bg-colour-spikes);
+    position: relative;
     height: 47rem;
     }
   
@@ -326,11 +328,11 @@ footer p {
   .item-1 { grid-column: 4 / span 6; grid-row: 1 / span 12; }     /* Some of the... */
   .item-2 { grid-column: 11 / span 6; grid-row: 1 / span 12; }    /* Automatic Writing is a... */
   .item-3 { grid-column: 5 / span 11; grid-row: 16 / span 9; }    /* John Frusciante plays... */
-  .item-4 { grid-column: 4 / span 6; grid-row: 28 / span 13; }    /* .smudgeLarge */
+  .item-4 { grid-column: 4 / span 6; grid-row: 28 / span 13; }    /* .smudge */
   .item-5 { grid-column: 11 / span 6; grid-row: 28 / span 13; }   /* I have a mutated brain... */
   .item-6 { grid-column: 1 / span 19; grid-row: 44 / span 8; }    /* Ataxia was formed... */
   .item-7 { grid-column: 4 / span 6; grid-row: 55 / span 13; }    /* It was the sky... */
-  .item-8 { grid-column: 11 / span 6; grid-row: 55 / span 13; }   /* .polaroidLarge */
+  .item-8 { grid-column: 11 / span 6; grid-row: 55 / span 13; }   /* .polaroid */
   .item-9 { grid-column: 1 / span 19; grid-row: 71 / span 9; }    /* The band then began... */
   .item-10 { grid-column: 2 / span 5; grid-row: 85 / span 7; }    /* Ataxia first spent... */
   .item-11 { grid-column: 8 / span 5; grid-row: 83 / span 11; }   /* .book */
@@ -344,15 +346,15 @@ footer p {
 
 @media (min-width: 2200px) {
   
-  .smudgeLarge,
-  .polaroidLarge,
+  .smudge,
+  .polaroid,
   .book {
     transform: translateY(-30%);
   }
 
   .book {
-    height: auto;
     width: auto;
+    height: auto;
     min-width: 100%;
     max-width: 200rem;
     min-height: 100%;

@@ -129,9 +129,7 @@ footer {
   background: var(--bg-colour-accent);
   width: 15rem;
   height: 2rem;
-  margin: 0 auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 3rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
