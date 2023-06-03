@@ -83,6 +83,11 @@ a {
   color: var(--text-desktop-colour-secondary);
 }
 
+::selection {
+  color: white;
+  background: black;
+}
+
 /* MOBILE IMAGE STYLES */
 
 .headerDesktop {
