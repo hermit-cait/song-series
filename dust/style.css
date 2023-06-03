@@ -71,6 +71,11 @@ li {
   color: var(--text-mobile-colour-accent-bold);
 }
 
+::selection {
+  color: white;
+  background: black;
+}
+
 /* MOBILE IMAGE STYLES */
 
 .headerDesktop {
