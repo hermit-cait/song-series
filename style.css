@@ -3,8 +3,8 @@
 }
 
 body {
-  max-width: 100%;
   background: #000;
+  max-width: 100%;
 }
 
 /* MOBILE TEXT & IMAGE STYLES */
@@ -15,21 +15,21 @@ p {
 }
 
 h1 {
-  font-size: 2.5rem;
   color: #bbb;
+  font-size: 2.5rem;
   text-align: center;
 }
 
 p {
-  font-size: 1.15rem;
   color: #bbb;
+  font-size: 1.15rem;
   margin: 1rem;
 }
 
 img {
-  display: block;
-  height: auto;
   width: 95%;
+  height: auto;
+  display: block;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -127,8 +127,8 @@ footer p {
   }
 
   img {
-    height: auto;
     width: 100%;
+    height: auto;
     min-width: 20vw;
     max-width: 30vw;
     margin-bottom: 2rem;
