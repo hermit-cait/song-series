@@ -1,170 +1,51 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Caitlin Eybers</title>  
-  <link href="style.css" type="text/css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Song Series</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
 
-<body>
+  <body>
 
-  <header>
+    <div class="content">
 
-    <input type='checkbox' id='navToggle' class='navToggle'>    
+      <header>
+      <h1>The Song Series</h1>
+      </header>
 
-      <div class="logoContainer">
-        <div class="logo">          
-          <a href="index.html"><ion-icon name='planet-outline'></ion-icon></a>
-        </div>
-        <a href="index.html">Caitlin Eybers</a>  
-      </div>
+      <section class="mainText">
 
-    <nav id="nav">
-      <ul>
-        <li><a href="#aboutMe">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>           
-    </nav>    
+        <p>This is a small collection of web projects exploring the mobile first strategy and responsive design.</p>
 
-    <label for='navToggle' class='navToggleLabel'>
-      <span class="navButton"></span>
-    </label>
+        <p>I built them with the intention of practising grid layouts and the art of writing clean code.</p>
 
-  </header>
+        <p>These three projects are each inspired by a song. My goal was to create a design for each one that evokes the spirit of the chosen song as much as possible.</p> 
+        
+        <p>In all three I used the lyrics as a key feature. I also included pictures which complement the mood of the song as well as relevant information about the album and artist in question.</p>
 
-  <section class="hero" id="hero">
-
-    <h1>Hi, my name is <span class="green">Caitlin Eybers</span> and I am a <span class="green">front-end web developer</span>.</h1>
-    <p>I build websites that are well designed and easy to use. I am passionate about the internet and the experience of navigating it. I would love to work with you to make the web a more accessible and beautiful place.</p>
-
-  </section>
-
-  <section class="aboutMe" id="aboutMe">
-
-    <h2>About Me</h2>
-
-    <p>I am a hard working and creative person who never turns down a challenge. My current job has taught me many skills which are transferrable to the tech industry such as marketing, teamwork and problem solving.</p>
-      
-    <p>Front-end development and UX/UI are the areas in which I am most comfortable but I am also highly motivated to learn more about back-end. The technologies that I am busy learning right now are PHP and MySQL.</p>
-
-    <div class="wrapperCV">
-      <a href="#" class="button buttonCV">View my CV</a>
-    </div>
-
-  </section>
-
-  <section class="techContainer">
-    
-    <h3 class="techLabel">Technologies I use:</h3>
-    
-    <div class="tech">
-      <ion-icon name='logo-html5'></ion-icon>
-      <span>HTML</span>
-    </div>
-
-    <div class="tech">
-      <ion-icon name='logo-css3'></ion-icon>
-      <span>CSS</span>
-    </div>
-
-    <div class="tech">
-      <ion-icon name='logo-javascript'></ion-icon>    
-      <span>Javascript</span>
-    </div>   
-
-    <div class="tech">
-      <ion-icon name='logo-react'></ion-icon>            
-      <span>React</span>
-    </div>
-
-  </section>  
-
-  <section class="projects" id="projects">
-
-    <h2>Projects</h2>
-
-    <div class="cardContainer">
-
-      <div class="card card-1">
-
-        <img src="#" alt="">
-        <a href="#" class="button buttonDemo">
-          <ion-icon name='globe-outline'></ion-icon>
-          Live Demo
-        </a>
-
-        <img src="#" alt="">
-        <a href="#" class="button buttonCode">
-          <ion-icon name='logo-github'></ion-icon>
-          View Code
-        </a>
-
-      </div>
-
-      <div class="card card-2">
-
-        <img src="#" alt="">
-        <a href="#" class="button buttonDemo">
-          <ion-icon name='globe-outline'></ion-icon>
-          Live Demo
-        </a>
-
-        <img src="#" alt="">
-        <a href="#" class="button buttonCode">
-          <ion-icon name='logo-github'></ion-icon>
-          View Code
-        </a>
-
-      </div>
+      </section>
 
     </div>
 
-  </section>
+    <div class="links">
+      <a href="./violet/index.html" target="_blank"><img src="link-violet.png"></a><br>
+      <a href="./stars/index.html" target="_blank"><img src="link-stars.png"></a><br>
+      <a href="./dust/index.html" target="_blank"><img src="link-dust.png"></a>
+    </div>
 
-  <section class="contact" id="contact">
+    <div class="footerWrapper">
+      <footer>
+        <p>Website created by Cait Eybers</p>
+      </footer>
+    </div>
 
-    <h2>Contact</h2>
-
-    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xyyaqlkz" method="post">
-
-      <fieldset id="fs-frm-inputs">
-
-        <label for="full-name">Name</label>
-        <input type="text" name="name" id="full-name" required="">
-
-        <label for="email-address">Email</label>
-        <input type="email" name="_replyto" id="email-address" required="">
-
-        <label for="message">Message</label>
-        <textarea rows="5" name="message" id="message" required=""></textarea>
-        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-
-      </fieldset>
-
-      <div class="submit">
-        <input class="submit" type="submit" value="Submit">
-      </div>
-
-    </form>     
-
-    <script src="script.js"></script> 
-
-  </section>
-
-  <script src="script.js"></script> 
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  
-  <footer><p>Website created by Caitlin</p></footer>
-
-</body>
+  </body>
 
 </html>
