@@ -2,137 +2,476 @@
   box-sizing: border-box;
 }
 
-body {
-  max-width: 100%;
-  background: #000;
+html {
+  scroll-behavior: smooth;
 }
 
-/* MOBILE TEXT & IMAGE STYLES */
+:root {
+  --bg-light-grey: #e0ecda;
+  --bg-light-green: #6bec20;
+  --bg-dark-green: #3c9911;
+  --text-dark-green: #003b0a;
+}
+
+/*** TABLE OF CONTENTS: ***/
+
+/* Mobile text styles */
+/* Mobile font sizes */
+/* Mobile layout */
+/* About Me section - mobile */
+/* Projects section - mobile */
+/* Contact section - mobile */
+/* Mobile navigation formatting */
+/* Heading gradient animation */
+/* Media queries for tablets */
+/* Desktop text styles */
+/* Desktop layout */
+/* Desktop navigation formatting */
+
+
+/* -------------------------------- */
+
+
+/* Mobile text styles */
 
 h1,
-p {
-  font-family: Roboto Mono;
+h2,
+h3,
+a,
+p,
+span,
+label,
+input,
+textarea {
+  font-family: Figtree;
+  letter-spacing: 0.06rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #bbb;
-  text-align: center;
+a,
+a:visited {
+  color: black;
 }
 
-p {
-  font-size: 1.15rem;
-  color: #bbb;
-  margin: 1rem;
+a {
+  text-decoration: none;
 }
 
-img {
-  display: block;
-  height: auto;
-  width: 95%;
-  margin: 0 auto;
-  padding: 1rem;
+ul {
+  list-style: none;  
 }
 
-.mainText {
-  padding-bottom: 2rem;
-}
-
+h2,
 footer {
   text-align: center;
-  padding-bottom: 1rem;
+}
+
+/* Mobile font sizes */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p,
+a.button,
+.logoContainer a,
+label,
+input {
+  font-size: 1.2rem;
 }
 
 footer p {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
-/* MEDIA QUERIES FOR TABLETS */
+/* Mobile layout */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.logoContainer {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}
+
+.logo ion-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-inline: 0.5rem;
+  transform: rotateY(180deg);
+}
+
+.hero {
+  margin-top: 10rem;
+}
+
+section {
+  margin-top: 6rem;
+  margin-inline: 1rem;
+}
+
+/* About Me section - mobile */
+
+.techContainer {
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  gap: 1rem;
+}
+
+.techLabel {
+  width: 100%;
+}
+
+.tech {
+  background-color: black;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech ion-icon {
+  color: white;
+  width: 5rem;
+  height: 5rem;
+}
+
+.tech span {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.button {
+  background-color: var(--bg-light-green);
+  border-radius: 3rem;
+  padding: 1.3rem;
+}
+
+.wrapperCV {
+  padding-block: 3rem;
+}
+
+.techLabel,
+.wrapperCV {
+  text-align: center;
+}
+
+/* Projects section - mobile */
+
+.card {
+  background-color: var(--bg-light-grey);
+  border-radius: 1rem;
+  width: clamp(20rem, 90%, 30rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card .button {
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.card a {
+  text-align: center;
+}
+
+.button ion-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+/* Contact section - mobile */
+
+fieldset {
+  width: clamp(15rem, calc(100% - 3rem), 30rem);
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+#full-name,
+#email-address,
+#message {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+.submit {
+  text-align: center;
+  border-radius: 2rem;
+  margin-block: 0.5rem;
+  padding: 0.5rem;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 8rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile navigation formatting */
+
+nav {
+  background-color: white;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 4rem 0 2rem 0;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav a {
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.logoContainer {  
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav li {
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+.navToggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.navToggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.navToggle:checked ~ .logoContainer {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+span.navButton {
+  color: black;
+}
+
+.navToggle {
+  display: none;
+}
+
+.navToggleLabel {
+  position: absolute;
+  top: -1.3rem;
+  left: 0;
+  margin-left: 1rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.navToggleLabel span,
+.navToggleLabel span::before,
+.navToggleLabel span::after {
+  display: block;
+  background: black;
+  height: 3px;
+  width: 2rem;
+  position: relative;
+}
+
+.navToggleLabel span::before,
+.navToggleLabel span::after {
+  content: '';
+  position: absolute;
+}
+
+.navToggleLabel span::before {
+  bottom: 10px;
+}
+
+.navToggleLabel span::after {
+  top: 10px;
+}
+
+/* Heading gradient animation */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  h1 {
+    background-image: linear-gradient(270deg, var(--bg-light-green),var(--bg-dark-green));
+    background-size: 400% 400%;  
+    background-clip: text;
+    animation: headingGradient 7s ease infinite;
+  }
+  
+  @keyframes headingGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  
+  span.green {
+    color: transparent;
+  }
+
+}
+
+/* Media queries for tablets */
 
 @media (min-width: 600px) {
 
-  body {
-    max-width: 50%;
+  section:not(.techContainer) {
+    width: clamp(30rem, calc(60% - 10rem), 50rem);
     margin: 0 auto;
   }
 
-  h1 {
-    font-size: 3rem;
+  section {
+    padding-top: 8rem;
   }
 
-  p {
-    font-size: 1.2rem;
-  }
-
-  footer p {
-    font-size: 1rem;
+  .techContainer {
+    padding-top: 0;
   }
 
 }
 
-/* MEDIA QUERIES FOR DESKTOP */
+/* DESKTOP MEDIA QUERIES */
 
 @media (min-width: 1200px) {
 
-  body {
-    max-width: 100%;
-  }
+  /* Desktop text styles */
 
-  h1 {
-    font-size: 3rem;
-  }
-
-  p {
+  .logoContainer a {
     font-size: 1rem;
   }
 
-  .mainText {
-    margin: 0 5rem;
-    padding-bottom: 0;
+  .logo ion-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.2rem;
   }
 
-  .mainText p {
-    width: clamp(20rem, 80%, 50rem);
-    margin: 0 auto;    
-    margin-bottom: 0.8rem;
+  /* Desktop layout */
+
+  body {
+    margin: 0;
+    padding: 0;
   }
 
-  /* div {
-    border: red solid 1px;
-  } */
-
-  .content {
-    position: fixed;
-    width: 64%;    
+  .submit {
+    margin-bottom: 3rem;
   }
 
-  .links {
+  /* Desktop navigation formatting */
+
+  .navToggleLabel {
+    display: none;
+  }
+  
+  header {
+    height: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .logoContainer {
+    padding: 0;
+    height: 51px;
+    margin-left: 2rem;
+    grid-column: 1 / 2; 
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .logoContainer a {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 2 / 3;     
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    font-size: 1rem;
+    margin-left: 0;
+    margin-right: 5rem;
+    padding: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: black; 
     position: absolute;
-    top: 2rem;
-    right: 6%;
+    top: -0.75rem;
+    left: 0;
+    right: 0; 
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
   }
 
-  footer {
-    padding: 0;
-  }
-
-  footer p {
-    font-size: 0.8rem;
-  }
-
-  .footerWrapper {
-    position: fixed;
-    bottom: 1rem;
-    width: 64%;    
-  }
-
-  img {
-    height: auto;
-    width: 100%;
-    min-width: 20vw;
-    max-width: 30vw;
-    margin-bottom: 2rem;
-    padding: 0;
+  nav a:hover::before {
+    transform: scale(1, 1);
   }
 
 }
+
